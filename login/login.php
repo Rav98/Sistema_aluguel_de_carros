@@ -17,8 +17,8 @@ Released   : 20140207
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -32,59 +32,37 @@ Released   : 20140207
 				<!--<span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span> </div>-->
 			<div id="menu">
 				<ul>
-					<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
-					<li><a href="login/login.php" accesskey="2" title="">Login</a></li>
-					<li><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
-					<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
-					<li><a href="suv.php" accesskey="5" title="">SUV</a></li>
-					<li><a href="luxo.php" accesskey="6" title="">Luxo</a></li>
-					<li><a href="contato.php" accesskey="7" title="">Contato</a></li>
+					<li><a href="../index.php" accesskey="1" title="">Home</a></li>
+					<li class="current_page_item"><a href="current_page_item" accesskey="2" title="">Login</a></li>
+					<li><a href="../economicos.php" accesskey="3" title="">Econômicos</a></li>
+					<li><a href="../utilitarios.php" accesskey="4" title="">Utilitários</a></li>
+					<li><a href="../suv.php" accesskey="5" title="">SUV</a></li>
+					<li><a href="../luxo.php" accesskey="6" title="">Luxo</a></li>
+					<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div id="wrapper2">
-		<div id="welcome" class="container">
-			<div class="title">
-				<h2>Bem-vindo(a) ao nosso website!</h2>
-			</div>
-			<p>Este é um sistema desenvolvido para facilitar o <strong>gerenciamento</strong> de aluguel de veículos.</p>
-		</div>
-	</div>
-	<div id="wrapper3">
-		<div id="portfolio" class="container">
-			<div class="title">
-				<h2>Vivamus fermentum nibh</h2>
-				<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span> </div>
-			<div class="column1">
-				<div class="box">
-					<span class="icon icon-wrench"></span>
-					<h3>Vestibulum venenatis</h3>
-					<p>Fermentum nibh augue praesent a lacus at urna congue rutrum.</p>
-					<a href="#" class="button button-small">Etiam posuere</a> </div>
-			</div>
-			<div class="column2">
-				<div class="box">
-					<span class="icon icon-trophy"></span>
-					<h3>Praesent scelerisque</h3>
-					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button button-small">Etiam posuere</a> </div>
-			</div>
-			<div class="column3">
-				<div class="box">
-					<span class="icon icon-key"></span>
-					<h3>Donec dictum metus</h3>
-					<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button button-small">Etiam posuere</a> </div>
-			</div>
-			<div class="column4">
-				<div class="box">
-					<span class="icon icon-lock"></span>
-					<h3>Mauris vulputate dolor</h3>
-					<p>Rutrum fermentum nibh in augue praesent urna congue rutrum.</p>
-					<a href="#" class="button button-small">Etiam posuere</a> </div>
-			</div>
-		</div>
+	<div id="divlogin" class="container" >
+		<form method="post" action="confirmalogin.php" style="margin-center=0px;">
+			<label text-align="center" style="width: 90px; height: 2px; display: inline-block;
+			color: black; font-family: 'Open Sans', Arial, Helvetica, sans-serif; size: 15px;">CPF:</label>
+			<input type="text" name="cpf" />
+			<br>
+			<label style="width: 90px; height: 2px; display: inline-block;
+			color: black; font-family: 'Open Sans', Arial, Helvetica, sans-serif; size: 15px;">Senha</label>
+			<input type="password" name="senha" />
+			<br>
+			<button type="submit" id="botaoEntrar" class="button fit">
+				Entrar
+			</button>
+		</form>
+
+		<form method="post" action="../criarconta.php">
+			<button type="submit" id="botaoCriarConta" class="button fit">
+				Criar conta
+			</button>
+		</form>
 	</div>
 </div>
 <div id="copyright" class="container">

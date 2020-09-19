@@ -32,7 +32,7 @@ Released   : 20140207
 				<!--<span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span> </div>-->
 			<div id="menu">
 				<ul>
-					<li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+					<li class="current_page_item"><a href="index.php" accesskey="1" title="">Home</a></li>
 					<li><a href="login/login.php" accesskey="2" title="">Login</a></li>
 					<li><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
 					<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
