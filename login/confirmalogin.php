@@ -35,4 +35,3 @@ if ($row = $stm -> fetch()) {
 } else {
 	header("location:login.php?error=login");
 }
-?>
