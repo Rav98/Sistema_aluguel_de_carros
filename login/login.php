@@ -44,7 +44,7 @@ Released   : 20140207
 		</div>
 	</div>
 	<div id="divlogin" class="container" >
-		<form method="post" action="confirmalogin.php" style="margin-center=0px;">
+		<form method="post" action="confirmalogin.php">
 			<label text-align="center" style="width: 90px; height: 2px; display: inline-block;
 			color: black; font-family: 'Open Sans', Arial, Helvetica, sans-serif; size: 15px;">CPF:</label>
 			<input type="text" name="cpf" />
