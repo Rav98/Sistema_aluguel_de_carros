@@ -15,7 +15,14 @@
 	<div id="wrapper1">
 		<div id="header-wrapper">
 			<div id="header" class="container">
-				<div id="logo"> <span class="icon icon-cogs"></span>
+				<div id="logo">
+					<div id="wrapper1">
+						<div id="espaço_container" class="container">
+							<div id="logo_site">
+								<img src="../images/carros_logo.png" alt="some text" width=940 height=200>
+							</div>
+						</div>
+					</div>
 					<h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
 					<div id="menu">
 						<ul>
@@ -33,12 +40,12 @@
 			<div id="wrapperlogin">
 				<form method="post" action="confirmalogin.php">
 
-					<label  id="textologin" >CPF:</label>
+					<label id="textologin" >CPF:</label>
 					<input type="text" name="cpf" />
 
 					<br>
 
-					<label id="textologin" >Senha:</label>
+					<label id="textologin">Senha:</label>
 					<input type="password" name="senha" />
 					<br>
 					<button type="submit" id="botaoEntrar" class="button">

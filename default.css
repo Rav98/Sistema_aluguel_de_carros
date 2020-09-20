@@ -189,7 +189,7 @@ ul.contact li a:before {
 	width: 60px;
 	height: 60px;
 	line-height: 60px;
-	background: #6C2A6A;
+	background: #008080;
 	border-radius: 30px;
 	text-align: center;
 }
@@ -204,7 +204,7 @@ ul.contact li a:before {
 	display: inline-block;
 	margin-top: 2em;
 	padding: 0.6em 1em;
-	background: #6C2A6A;
+	background: #008080;
 	border-radius: 4px;
 	line-height: 1.8em;
 	text-decoration: none;
@@ -275,11 +275,15 @@ ul.contact li a:before {
 }
 
 #logo h1 a {
-	color: #6C2A6A;
+	color: #008080;
 }
 
 #logo a {
 	text-decoration: none;
+}
+
+#logo_site{
+
 }
 
 #logo span {
@@ -297,7 +301,7 @@ ul.contact li a:before {
 	display: inline-block;
 	margin-bottom: 2em;
 	padding: 1em;
-	background: #6C2A6A;
+	background: #008080;
 	border-radius: 50%;
 	font-size: 1.6em;
 	color: #FFF;
@@ -346,7 +350,7 @@ ul.contact li a:before {
 }
 
 #wrapper2 {
-	background: #6C2A6A;
+	background: #008080;
 }
 
 #wrapper3 {
@@ -360,11 +364,11 @@ ul.contact li a:before {
 	padding: 8em 0em 4em 0em;
 }
 
-#wrapperlogin{
+#wrapperlogin {
 	margin-right: 20%;
 	margin-left: 20%;
 	text-align: center;
-	background: #6C2A6A;
+	background: #008080;
 }
 
 /*********************************************************************************/
@@ -469,6 +473,11 @@ ul.contact li a:before {
 	padding-top: 8em;
 }
 
+#espaço_container {
+	padding-top: 1em;
+	text-align: center;
+}
+
 #portfolio .box {
 	text-align: center;
 	color: rgba(0, 0, 0, 0.7);
@@ -516,6 +525,10 @@ ul.contact li a:before {
 
 .column4 {
 	float: right;
+}
+
+.title {
+	text-align: center;
 }
 
 /*********************************************************************************/
@@ -579,17 +592,15 @@ ul.contact li a:before {
 	border-top-color: #292929;
 }
 
-#textologin{
+#textologin {
 	margin-top: 3%;
 	margin-inline-end: 2%;
 	margin-block-end: 2%;
 	text-align: center;
 	text-shadow: #FFF;
-	color:floralwhite;
+	color: floralwhite;
 	font-size: 140%;
-	width: 100px; 
+	width: 100px;
 	height: 22px;
 	display: inline-block
-
 }
-
