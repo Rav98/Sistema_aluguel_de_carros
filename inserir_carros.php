@@ -30,61 +30,66 @@
                         <div id="wrapperlogin">
                             <form method="post" action="salvaCarro.php">
 
-                                <label id="textologin">Placa:</label>
+                                <label id="textocadastra">Placa:</label>
                                 <input type="text" name="placaAutomovel" />
                                 <br>
 
-                                <label id="textologin">Cor:</label>
+                                <label id="textocadastra">Cor:</label>
                                 <input type="text" name="corAutomovel" />
                                 <br>
 
-                                <label id="textologin">Chassis:</label>
+                                <label id="textocadastra">Chassis:</label>
                                 <input type="text" name="chassisAutomovel" />
                                 <br>
 
-                                <label id="textologin">Direção:</label>
-                                <input type="text" name="direcaoAutomovel" />
-                                <br>
-
-                                <label id="textologin">Ar Cond: </label>
-                                <input type="text" name="ar_condicionadoAutomovel" />
-                                <br>
-
-                                <label id="textologin">Manuten: </label>
-                                <input type="text" name="manutencaoAutomovel" />
-                                <br>
-
-                                <label id="textologin">Nro Portas:</label>
+                                <label id="textocadastra">Nro de Portas:</label>
                                 <input type="text" name="nro_de_portasAutomovel" />
                                 <br>
 
-                                <label id="textologin">KM:</label>
+                                <label id="textocadastra">Quilometragem:</label>
                                 <input type="text" name="quilometragemAutomovel" />
                                 <br>
 
-                                <label id="textologin">Trasmissão:</label>
+                                <label id="textocadastra">Trasmissão:</label>
                                 <input type="text" name="transmissaoAutomovel" />
                                 <br>
 
-                                <label id="textologin">Marca:</label>
+                                <label id="textocadastra">Marca:</label>
                                 <input type="text" name="marcaAutomovel" />
                                 <br>
 
-                                <label id="textologin">Combustiv:</label>
+                                <label id="textocadastra">Combustiv:</label>
                                 <input type="text" name="tipo_de_combustivelAutomovel" />
                                 <br>
 
-                                <label id="textologin">Renavam:</label>
+                                <label id="textocadastra">Renavam:</label>
                                 <input type="text" name="renavamAutomovel" />
                                 <br>
 
-                                <label id="textologin">Tipo:</label>
+                                <label id="textocadastra">Tipo:</label>
                                 <input type="text" name="tipoAutomovel" />
+                                <br>
+
+                                <label id="textocadastracheck">Direção:</label>
+                                <input type="checkbox" id="textocadastra" name="direcaoAutomovel" value = "TRUE"/>
+                                <br>
+
+                                <label id="textocadastracheck">Ar Condicionado: </label>
+                                <input type="checkbox" id="textocadastra" name="ar_condicionadoAutomovel" value = "TRUE"/>
+                                <br>
+
+                                <label id="textocadastracheck">Manutenção: </label>
+                                <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value = "TRUE"/>
                                 <br>
 
                                 <button type="submit" id="botaoCadastro" class="button">
                                     Confirmar cadastro no sistema
                                 </button>
+
+                                <button type="submit" id="botaoCancelar" class="button">
+                                    Cancelar cadastro
+                                </button>
+                                
                             </form>
                         </div>
                     </div>
