@@ -587,29 +587,3 @@ ul.contact li a:before {
 #three-column .arrow-down {
 	border-top-color: #292929;
 }
-
-#textologin {
-	margin-top: 3%;
-	margin-inline-end: 2%;
-	margin-block-end: 2%;
-	text-align: center;
-	text-shadow: #FFF;
-	color: floralwhite;
-	font-size: 140%;
-	width: 100px;
-	height: 22px;
-	display: inline-block
-}
-
-#textoCadastro {
-	margin-top: 3%;
-	margin-inline-end: 2%;
-	margin-block-end: 2%;
-	text-align: center;
-	text-shadow: #FFF;
-	color: floralwhite;
-	font-size: 140%;
-	width: 100px;
-	height: 22px;
-	display: inline-block
-}
