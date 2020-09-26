@@ -5,7 +5,6 @@
 include_once "bd.php";
 
 #Recebe parâmetros para inserção no banco:
-$flag = 0;
 $placaAutomovel = $_POST['placaAutomovel'];
 $corAutomovel = $_POST['corAutomovel'];
 $chassisAutomovel = $_POST['chassisAutomovel'];
@@ -14,13 +13,13 @@ $ar_condicionadoAutomovel = $_POST['ar_condicionadoAutomovel'];
 $manutencaoAutomovel = $_POST['manutencaoAutomovel'];
 $nro_de_portaAutomovel = $_POST['nro_de_portaAutomovel'];
 $quilometragemAutomovel = $_POST['quilometragemAutomovel'];
+$transmissaoAutomovel = $_POST['transmissaoAutomovel'];
 $marcaAutomovel = $_POST['marcaAutomovel'];
 $tipo_de_combustivelAutomovel = $_POST['tipo_de_combustivelAutomovel'];
 $renavamAutomovel = $_POST['renavamAutomovel'];
+$statusAutomovel = $_POST['statusAutomovel'];
 $tipoAutomovel = $_POST['tipoAutomovel'];
-$transmissaoAutomovel = $_POST['transmissaoAutomovel'];
 
-$statusAutomovel = 1;
 
 if (isset($ar_condicionadoAutomovel)) {
     $ar_condicionadoAutomovel = 1;
@@ -40,16 +39,25 @@ if (isset($manutencaoAutomovel)) {
     $manutencaoAutomovel = 0;
 }
 
-# Query de inserção:
-$query = "INSERT INTO automovel VALUES ('$placaAutomovel','$corAutomovel','$chassisAutomovel','$direcaoAutomovel','$ar_condicionadoAutomovel','$manutencaoAutomovel','$nro_de_portaAutomovel','$quilometragemAutomovel', '$transmissaoAutomovel', '$marcaAutomovel','$tipo_de_combustivelAutomovel','$renavamAutomovel','$statusAutomovel','$tipoAutomovel')";
-$stm = $db->prepare($query); 
+if (isset($statusAutomovel)) {
+    $statusAutomovel = 1;
+} else {
+    $statusAutomovel = 0;
+}
 
+
+
+
+# Query de inserção:
+$query = "UPDATE automovel SET cor = '$corAutomovel', chassis = '$chassisAutomovel', direcao_assistida = '$direcaoAutomovel', ar_condicionado = '$ar_condicionadoAutomovel', manutencao = '$manutencaoAutomovel', nro_de_porta = '$nro_de_portaAutomovel', quilometragem = '$quilometragemAutomovel', transmissao = '$transmissaoAutomovel', marca = '$marcaAutomovel', tipo_de_combustivel = '$tipo_de_combustivelAutomovel', renavam = '$renavamAutomovel', status = '$statusAutomovel', tipo = '$tipoAutomovel' WHERE placa = '$placaAutomovel'";
+$stm = $db->prepare($query); 
 
 if ($stm->execute()) {   
     header("location:index.php");
 } 
 else {
-    header("location:salvaCarro.php?error=salvaCarro");
+    print "<p>Faiô</p>";
+    header("location:salvaEditaCarro.php?error=salvaEdiaCarro");
 }
 
 

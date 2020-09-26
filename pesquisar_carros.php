@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Sistema de Gerenciamento de Aluguel de Automóveis</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
@@ -28,7 +28,7 @@
                     <div id="menu">
                         <div id="divtitulocadastra">Pesquisar Automovel</div>
                         <div id="wrapperlogin">
-                            <form enctype="multipart/form-data" method="POST" action="editaCarro.php">
+                            <form enctype="multipart/form-data" method="POST" action="editar_carros.php">
 
                                 <label id="textocadastra">Placa:</label>
                                 <input type="text" id="campo" name="placaAutomovel" />
