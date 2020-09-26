@@ -95,15 +95,15 @@ if ($stm -> execute()) {
 
     # Se flag não vale zero, sinal que funcionou a inserção		
     if ($flag > 0) {
-        header("location:../index.php");
+        header("location:index.php");
     } else {
         echo "não inseriu";
-        header("location:cadastrarProduto.php?error=cadastroProduto");
+        header("location:salvaCarro.php?error=salvaCarro");
 
     }
 } else {
     echo "i";
-        header("location:cadastrarProduto.php?error=cadastroProduto");
+        header("location:salvaCarro.php?error=salvaCarro");
 
 }
 
