@@ -71,16 +71,22 @@
                                 <br>
 
                                 <label id="textocadastracheck">Direção:</label>
-                                <input type="checkbox" id="textocadastra" name="direcaoAutomovel" value = "TRUE"/>
+                                <input type="checkbox" id="textocadastra" name="direcaoAutomovel" value="TRUE" />
                                 <br>
 
                                 <label id="textocadastracheck">Ar Condicionado: </label>
-                                <input type="checkbox" id="textocadastra" name="ar_condicionadoAutomovel" value = "TRUE"/>
+                                <input type="checkbox" id="textocadastra" name="ar_condicionadoAutomovel" value="TRUE" />
                                 <br>
 
                                 <label id="textocadastracheck">Manutenção: </label>
-                                <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value = "TRUE"/>
+                                <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value="TRUE" />
                                 <br>
+                                <div>
+                                <label id="textocadastra">Selecione uma foto do automovel:</label>
+                                <input type="file" name="arquivos" accept="image/png, image/jpeg" multiple />
+                                    <br>
+                                </div>
+
 
                                 <button type="submit" id="botaoCadastro" class="button">
                                     Confirmar cadastro no sistema
@@ -89,7 +95,7 @@
                                 <button type="submit" id="botaoCancelar" class="button">
                                     Cancelar cadastro
                                 </button>
-                                
+
                             </form>
                         </div>
                     </div>
