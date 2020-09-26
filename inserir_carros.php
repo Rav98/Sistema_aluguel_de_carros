@@ -28,7 +28,7 @@
                     <div id="menu">
                         <div id="divtitulocadastra">Inserir Automovel</div>
                         <div id="wrapperlogin">
-                            <form method="POST" action="salvaCarro.php">
+                            <form enctype="multipart/form-data" method="POST" action="salvaCarro.php">
 
                                 <label id="textocadastra">Placa:</label>
                                 <input type="text" id="campo" name="placaAutomovel" />
@@ -81,15 +81,16 @@
                                 <label id="textocadastracheck">Manutenção: </label>
                                 <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value="TRUE" />
                                 <br>
-
+                                <!--
                                 <div id="divfotos">
 
                                     <label id="textofotocadastra">Selecione uma foto do automovel:</label>
                                     <br>
-                                    <input type="file" name="fotosAutomovel" accept="image/png, image/jpeg" multiple />
+                                    <input type="file" name="fotosAutomovel" />
 
                                 </div>
                                 <br>
+                                -->
                                 <div id="wrapper1">
                                 <button type="submit" id="botaoCadastro" class="button">
                                     Confirmar cadastro no sistema
