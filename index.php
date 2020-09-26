@@ -93,7 +93,7 @@
 		</div>
 		<div id="espaço_container" class="container">
 			<div class="title">
-				<h2>Acesse nossa redes sociais!</h2>
+				<h2>Acesse nossas redes sociais!</h2>
 				<span class="byline">Estamos sempre a disposição de nossos clientes!</span>
 			</div>
 			<ul class="contact">

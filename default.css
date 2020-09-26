@@ -602,6 +602,19 @@ ul.contact li a:before {
 }
 
 #textocadastra {
+	margin-top: 2%;
+	margin-inline-end: 2%;
+	margin-block-end: 2%;
+	text-align: center;
+	text-shadow: #FFF;
+	color: floralwhite;
+	font-size: 100%;
+	width: 100px;
+	height: 20px;
+	display: inline-block;
+}
+
+#textocadastracheck {
 	margin-top: 3%;
 	margin-inline-end: 2%;
 	margin-block-end: 2%;
@@ -610,19 +623,38 @@ ul.contact li a:before {
 	color: floralwhite;
 	font-size: 100%;
 	width: 100px;
-	height: 22px;
+	height: 10px;
 	display: inline-block;
 }
 
-#textocadastracheck {
+#divfotos{
 	margin-top: 3%;
 	margin-inline-end: 2%;
 	margin-block-end: 2%;
-	text-align: left;
-	text-shadow: #FFF;
-	color: floralwhite;
+	display: window;
+	text-align: center;
+}
+
+#divtitulocadastra{
+	margin-right: 20%;
+	margin-left: 20%;
+	text-align: center;
+	margin-top: 3%;
+	letter-spacing: 0.20em;
+	font-size: 1.50em;
+	font-weight: 600;
+	text-transform: uppercase;
+	outline: 0;
+	color: #FFF;
+	background: #008080;
+}
+
+#campo{
+	border-radius: 15px;
+}
+
+#textofotocadastra{
 	font-size: 100%;
-	width: 100px;
-	height: 22px;
-	display: inline-block;
+	color: #FFF;
+	text-align: center;
 }

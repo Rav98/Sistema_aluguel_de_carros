@@ -26,48 +26,48 @@
                     </div>
                     <h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
                     <div id="menu">
-                        <li><a title="">Inserir Automovel</a></li>
+                        <div id="divtitulocadastra">Inserir Automovel</div>
                         <div id="wrapperlogin">
                             <form method="POST" action="salvaCarro.php">
 
                                 <label id="textocadastra">Placa:</label>
-                                <input type="text" name="placaAutomovel" />
+                                <input type="text" id="campo" name="placaAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Cor:</label>
-                                <input type="text" name="corAutomovel" />
+                                <input type="text" id="campo" name="corAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Chassis:</label>
-                                <input type="text" name="chassisAutomovel" />
+                                <input type="text" id="campo" name="chassisAutomovel" />
                                 <br>
 
-                                <label id="textocadastra">Número de Portas:</label>
-                                <input type="text" name="nro_de_portaAutomovel" />
+                                <label id="textocadastra">Nro de Portas:</label>
+                                <input type="text" id="campo" name="nro_de_portaAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Quilometragem:</label>
-                                <input type="text" name="quilometragemAutomovel" />
+                                <input type="text" id="campo" name="quilometragemAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Trasmissão:</label>
-                                <input type="text" name="transmissaoAutomovel" />
+                                <input type="text" id="campo" name="transmissaoAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Marca:</label>
-                                <input type="text" name="marcaAutomovel" />
+                                <input type="text" id="campo" name="marcaAutomovel" />
                                 <br>
 
-                                <label id="textocadastra">Combustiv:</label>
-                                <input type="text" name="tipo_de_combustivelAutomovel" />
+                                <label id="textocadastra">Combustivel:</label>
+                                <input type="text" id="campo" name="tipo_de_combustivelAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Renavam:</label>
-                                <input type="text" name="renavamAutomovel" />
+                                <input type="text" id="campo" name="renavamAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Tipo:</label>
-                                <input type="text" name="tipoAutomovel" />
+                                <input type="text" id="campo" name="tipoAutomovel" />
                                 <br>
 
                                 <label id="textocadastracheck">Direção:</label>
@@ -81,13 +81,16 @@
                                 <label id="textocadastracheck">Manutenção: </label>
                                 <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value="TRUE" />
                                 <br>
-                                <div>
-                                <label id="textocadastra">Selecione uma foto do automovel:</label>
-                                <input type="file" name="fotosAutomovel" accept="image/png, image/jpeg" multiple />
+
+                                <div id="divfotos">
+
+                                    <label id="textofotocadastra">Selecione uma foto do automovel:</label>
                                     <br>
+                                    <input type="file" name="fotosAutomovel" accept="image/png, image/jpeg" multiple />
+
                                 </div>
-
-
+                                <br>
+                                <div id="wrapper1">
                                 <button type="submit" id="botaoCadastro" class="button">
                                     Confirmar cadastro no sistema
                                 </button>
@@ -95,7 +98,7 @@
                                 <button type="submit" id="botaoCancelar" class="button">
                                     Cancelar cadastro
                                 </button>
-
+                                </div>
                             </form>
                         </div>
                     </div>
