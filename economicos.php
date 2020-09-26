@@ -39,6 +39,33 @@
 				</div>
 			</div>
 		</div>
+		<?php
+			include_once "bd.php";
+
+			#SQL para listagem
+			$query = "SELECT * FROM automovel WHERE tipo = 'Econômico'";
+			$stm = $db -> prepare($query);
+
+			#Executa o SQL
+			if ($stm -> execute()) {
+				while ($row = $stm -> fetch()) {
+					$placaAutomovel = $row['placa'];
+					$corAutomovel = $row['cor'];
+					$chassisAutomovel = $row['chassis'];
+					$direcaoAutomovel = $row['direcao_assistida'];
+					$ar_condicionadoAutomovel = $row['ar_condicionado'];
+					$manutencaoAutomovel = $row['manutencao'];
+					$nro_de_portaAutomovel = $row['nro_de_porta'];
+					$quilometragemAutomovel = $row['quilometragem'];
+					$transmissaoAutomovel = $row['transmissao'];
+					$marcaAutomovel = $row['marca'];
+					$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
+					$renavamAutomovel = $row['renavam'];
+					$statusAutomovel = $row['status'];
+					$tipoAutomovel = $row['tipo'];
+				}
+			}
+			
 	</div>
 </body>
 
