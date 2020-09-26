@@ -70,14 +70,14 @@
 						<div class="box">
 							<span class="icon icon-key"></span>
 							<h3>Abra possibilidades!</h3>
-							<p>Um automóvel te da possibilidades de momentos incriveis e inesquecíveis. Um onibus e um metro não... </p>
+							<p>Um automóvel te dá possibilidades de momentos incriveis e inesquecíveis. Um onibus e um metro não... </p>
 						</div>
 					</div>
 					<div class="column4">
 						<div class="box">
 							<span class="icon icon-lock"></span>
 							<h3>Sua viagem assegurada!</h3>
-							<p>Não se preocupe! Todos os automoveis tem seguro. Qualquer problema é só chamar!</p>
+							<p>Não se preocupe! Todos os automoveis têm seguro. Qualquer problema é só chamar!</p>
 						</div>
 					</div>
 				</div>
