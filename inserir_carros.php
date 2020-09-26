@@ -83,7 +83,7 @@
                                 <br>
                                 <div>
                                 <label id="textocadastra">Selecione uma foto do automovel:</label>
-                                <input type="file" name="arquivos" accept="image/png, image/jpeg" multiple />
+                                <input type="file" name="fotosAutomovel" accept="image/png, image/jpeg" multiple />
                                     <br>
                                 </div>
 
