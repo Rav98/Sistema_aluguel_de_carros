@@ -28,7 +28,7 @@
                     <div id="menu">
                         <li><a title="">Inserir Automovel</a></li>
                         <div id="wrapperlogin">
-                            <form method="post" action="salvaCarro.php">
+                            <form method="POST" action="salvaCarro.php">
 
                                 <label id="textocadastra">Placa:</label>
                                 <input type="text" name="placaAutomovel" />
@@ -42,8 +42,8 @@
                                 <input type="text" name="chassisAutomovel" />
                                 <br>
 
-                                <label id="textocadastra">Nro de Portas:</label>
-                                <input type="text" name="nro_de_portasAutomovel" />
+                                <label id="textocadastra">Número de Portas:</label>
+                                <input type="text" name="nro_de_portaAutomovel" />
                                 <br>
 
                                 <label id="textocadastra">Quilometragem:</label>

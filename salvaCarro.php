@@ -9,45 +9,26 @@ include_once "bd.php";
 $placaAutomovel = $_POST['placaAutomovel'];
 $corAutomovel = $_POST['corAutomovel'];
 $chassisAutomovel = $_POST['chassisAutomovel'];
-$direcaoAutomovel = $_POST['direcaoAutomovel'];
-$ar_condicionadoAutomovel = $_POST['ar_condicionadoAutomovel'];
-$manutencaoAutomovel = $_POST['manutencaoAutomovel'];
-$nro_de_portaAutomovel = $_POST['nro_de_portaAutomovel'];
+$direcaoAutomovel = 1; #$_POST['direcaoAutomovel'];
+$ar_condicionadoAutomovel = 1;# $_POST['ar_condicionadoAutomovel'];
+$manutencaoAutomovel = 1; # $_POST['manutencaoAutomovel'];
+$nro_de_portaAutomovel = 1; #$_POST['nro_de_portaAutomovel'];
 $quilometragemAutomovel = $_POST['quilometragemAutomovel'];
 $marcaAutomovel = $_POST['marcaAutomovel'];
 $tipo_de_combustivelAutomovel = $_POST['tipo_de_combustivelAutomovel'];
 $renavamAutomovel = $_POST['renavamAutomovel'];
-$statusAutomovel = $_POST['statusAutomovel'];
 $tipoAutomovel = $_POST['tipoAutomovel'];
 $transmissaoAutomovel = $_POST['transmissaoAutomovel'];
-
-/* Conectando com o banco de dados para cadastrar registros */
+$statusAutomovel = 1;
 
 # O banco de dados possui uma funcao para realizar as inserções:
-$query = "SELECT inserirautomovel(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$query = "INSERT INTO automovel VALUES ('$placaAutomovel','$corAutomovel','$chassisAutomovel','$direcaoAutomovel','$ar_condicionadoAutomovel','$manutencaoAutomovel','$nro_de_portaAutomovel','$quilometragemAutomovel', '$transmissaoAutomovel', '$marcaAutomovel','$tipo_de_combustivelAutomovel','$renavamAutomovel','$statusAutomovel','$tipoAutomovel')";
+$cod = 1;
+$stm = $db->prepare($query); 
 
-$stm = $db -> prepare($query); 
-$stm -> bindParam(1, $placaAutomovel);
-$stm -> bindParam(2, $corAutomovel);
-$stm -> bindParam(3, $chassisAutomovel);
-$stm -> bindParam(4, $direcaoAutomovel);
-$stm -> bindParam(5, $ar_condicionadoAutomovel);
-$stm -> bindParam(6, $manutencaoAutomovel);
-$stm -> bindParam(7, $nro_de_portaAutomovel);
-$stm -> bindParam(8, $quilometragemAutomovel);
-$stm -> bindParam(9, $marcaAutomovel);
-$stm -> bindParam(10, $tipo_de_combustivelAutomovel);
-$stm -> bindParam(11, $renavamAutomovel);
-$stm -> bindParam(12, $statusAutomovel);
-$stm -> bindParam(13, $tipoAutomovel);
-$stm -> bindParam(14, $transmissaoAutomovel);
-
-
-$flag = 0;
-
-if ($stm -> execute()) {
+if ($stm->execute()) {
     $flag = 1;
-    echo "foi";
+    
     /*
     $lastIdProduto = $db -> lastInsertId();
     
@@ -87,25 +68,24 @@ if ($stm -> execute()) {
             }
         }
     }
+    
     */
-
-    /* Verificar se deu tudo certo
-        *
-        */
+    # Verificar se deu tudo certo
 
     # Se flag não vale zero, sinal que funcionou a inserção		
     if ($flag > 0) {
         header("location:index.php");
     } else {
-        echo "não inseriu";
-        header("location:salvaCarro.php?error=salvaCarro");
+        echo "<p>não inseriu</p>";
+        #header("location:salvaCarro.php?error=salvaCarro");
 
     }
-} else {
-    echo "i";
-        header("location:salvaCarro.php?error=salvaCarro");
-
+} 
+else {
+    print "<p>Faiô</p>";
+    #header("location:salvaCarro.php?error=salvaCarro");
 }
 
 
 ?>
+
