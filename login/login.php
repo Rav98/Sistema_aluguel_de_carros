@@ -55,7 +55,7 @@
 
 				<form method="post" action="../criarconta.php">
 
-					<button type="submit" id="botaoCriarConta" class="button">
+					<button  id="botaoCriarConta" class="button" formaction="../cliente/cria_conta.php">
 						Criar conta
 					</button>
 

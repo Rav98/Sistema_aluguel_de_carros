@@ -26,48 +26,48 @@
                     </div>
                     <h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
                     <div id="menu">
-                        <div id="divtitulocadastra">Criar uma conta no sistema</div>
+                        <div id="divtitulocadastra">Alterar conta funcionario</div>
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="salvaConta.php">
 
                                 <label id="textocadastra">Nome:</label>
-                                <input type="text" id="campo" name="nomeFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="nomeFuncionario" />
                                 <br>
 
                                 <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" name="dataFuncionario" />
+                                <input readonly="true" type="text" id="campodata" name="dataFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
-                                <input type="text" id="campo" name="cpfFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="cpfFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">CEP:</label>
-                                <input type="text" id="campo" name="cepFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="cepFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Rua:</label>
-                                <input type="text" id="campo" name="ruaFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="ruaFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Bairro:</label>
-                                <input type="text" id="campo" name="bairroFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="bairroFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Cidade:</label>
-                                <input type="text" id="campo" name="cidadeFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="cidadeFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Função:</label>
-                                <input type="text" id="campo" name="funcaoFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="funcaoFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
-                                <input type="text" id="campo" name="senhaFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="senhaFuncionario" />
                                 <br>
 
                                 <label id="textocadastra">Confirme a senha:</label>
-                                <input type="text" id="campo" />
+                                <input readonly="true" type="text" id="campo" />
                                 <br>
 
                                 <div id="wrapper1">

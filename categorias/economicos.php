@@ -44,7 +44,7 @@
 		include_once "../bd.php";
 
 		#SQL para listagem
-		$query = "SELECT * FROM automovel WHERE tipo = 'Econômico'";
+		$query = "SELECT * FROM automovel WHERE tipo = 'Economico'";
 		$stm = $db->prepare($query);
 
 		#Executa o SQL
@@ -64,6 +64,14 @@
 				$renavamAutomovel = $row['renavam'];
 				$statusAutomovel = $row['status'];
 				$tipoAutomovel = $row['tipo'];
+
+				echo "<div> Placa: </div>";
+				print $placaAutomovel;
+				echo "<div> Cor: </div>";
+				print $corAutomovel;
+				echo "<div> chassis: </div>";
+				print $chassisAutomovel;
+				
 			}
 		}
 		?>

@@ -627,15 +627,7 @@ ul.contact li a:before {
 	display: inline-block;
 }
 
-#divfotos{
-	margin-top: 3%;
-	margin-inline-end: 2%;
-	margin-block-end: 2%;
-	display: window;
-	text-align: center;
-}
-
-#divtitulocadastra{
+#divtitulocadastra {
 	margin-right: 20%;
 	margin-left: 20%;
 	text-align: center;
@@ -645,22 +637,41 @@ ul.contact li a:before {
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: 0;
-	color: #FFF;
-	background: #008080;
+	color: #008080;
+	background:whitesmoke;
 }
 
-#campo{
+#campo {
 	border-radius: 15px;
 }
 
-#textofotocadastra{
-	font-size: 100%;
-	color: #FFF;
-	text-align: center;
+#campodata {
+	position: absolute;
+	top: 538px;
+	left: 645px;
+	border-radius: 15px;
 }
 
-#textocliente{
+#textodata {
+	text-indent: 50px;
 	font-size: 100%;
 	color: #FFF;
-	text-align: center;
+	text-align: left;
+	font-size: 1.00em;
+}
+
+#textomotoristacleinte {
+	text-indent: 160px;
+	margin-top: 10px;
+	font-size: 100%;
+	color: #FFF;
+	text-align: left;
+	font-size: 1.00em;
+}
+
+#campomotoristacleinte {
+	position: absolute;
+	top: 830px;
+	left: 645px;
+	border-radius: 15px;
 }
