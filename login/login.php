@@ -6,8 +6,8 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-	<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 
@@ -28,10 +28,10 @@
 						<ul>
 							<li><a href="../index.php" accesskey="1" title="">Principal</a></li>
 							<li class="current_page_item"><a href="current_page_item" accesskey="2" title="">Login</a></li>
-							<li><a href="../economicos.php" accesskey="3" title="">Econômicos</a></li>
-							<li><a href="../utilitarios.php" accesskey="4" title="">Utilitários</a></li>
-							<li><a href="../suv.php" accesskey="5" title="">SUV</a></li>
-							<li><a href="../luxo.php" accesskey="6" title="">Luxo</a></li>
+							<li><a href="../categorias/economicos.php" accesskey="3" title="">Econômicos</a></li>
+							<li><a href="../categorias/utilitarios.php" accesskey="4" title="">Utilitários</a></li>
+							<li><a href="../categorias/suv.php" accesskey="5" title="">SUV</a></li>
+							<li><a href="../categorias/luxo.php" accesskey="6" title="">Luxo</a></li>
 							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
 						</ul>
 					</div>

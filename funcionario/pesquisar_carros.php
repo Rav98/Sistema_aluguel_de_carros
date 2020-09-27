@@ -7,8 +7,8 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 
@@ -20,7 +20,7 @@
                     <div id="wrapper1">
                         <div id="espaço_container" class="container">
                             <div id="logo_site">
-                                <img src="images/carros_logo.png" alt="some text" width=940 height=200>
+                                <img src="../images/carros_logo.png" alt="some text" width=940 height=200>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                     <button type="submit" id="botaoCadastro" class="button">
                                         Pesquisar
                                     </button>
-                                    <button type="reset" id="botaoCancelar" class="button">
+                                    <button id="botaoCancelar" class="button" formaction="../index.php">
                                         Cancelar
                                     </button>
                                 </div>

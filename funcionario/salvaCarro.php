@@ -2,7 +2,7 @@
 # Inicia a sessão.
 #session_start();
 
-include_once "bd.php";
+include_once "../bd.php";
 
 #Recebe parâmetros para inserção no banco:
 $flag = 0;
@@ -42,17 +42,11 @@ if (isset($manutencaoAutomovel)) {
 
 # Query de inserção:
 $query = "INSERT INTO automovel VALUES ('$placaAutomovel','$corAutomovel','$chassisAutomovel','$direcaoAutomovel','$ar_condicionadoAutomovel','$manutencaoAutomovel','$nro_de_portaAutomovel','$quilometragemAutomovel', '$transmissaoAutomovel', '$marcaAutomovel','$tipo_de_combustivelAutomovel','$renavamAutomovel','$statusAutomovel','$tipoAutomovel')";
-$stm = $db->prepare($query); 
+$stm = $db->prepare($query);
 
 
-if ($stm->execute()) {   
-    header("location:index.php");
-} 
-else {
+if ($stm->execute()) {
+    header("location:../index.php");
+} else {
     header("location:salvaCarro.php?error=salvaCarro");
 }
-
-
-
-?>
-

@@ -2,7 +2,7 @@
 # Inicia a sessão.
 #session_start();
 
-include_once "bd.php";
+include_once "../bd.php";
 
 #Recebe parâmetros para inserção no banco:
 $placaAutomovel = $_POST['placaAutomovel'];
@@ -50,17 +50,11 @@ if (isset($statusAutomovel)) {
 
 # Query de inserção:
 $query = "UPDATE automovel SET cor = '$corAutomovel', chassis = '$chassisAutomovel', direcao_assistida = '$direcaoAutomovel', ar_condicionado = '$ar_condicionadoAutomovel', manutencao = '$manutencaoAutomovel', nro_de_porta = '$nro_de_portaAutomovel', quilometragem = '$quilometragemAutomovel', transmissao = '$transmissaoAutomovel', marca = '$marcaAutomovel', tipo_de_combustivel = '$tipo_de_combustivelAutomovel', renavam = '$renavamAutomovel', status = '$statusAutomovel', tipo = '$tipoAutomovel' WHERE placa = '$placaAutomovel'";
-$stm = $db->prepare($query); 
+$stm = $db->prepare($query);
 
-if ($stm->execute()) {   
-    header("location:index.php");
-} 
-else {
+if ($stm->execute()) {
+    header("location:../index.php");
+} else {
     print "<p>Faiô</p>";
     header("location:salvaEditaCarro.php?error=salvaEdiaCarro");
 }
-
-
-
-?>
-
