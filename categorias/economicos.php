@@ -71,7 +71,6 @@
 				print $corAutomovel;
 				echo "<div> chassis: </div>";
 				print $chassisAutomovel;
-				
 			}
 		}
 		?>
