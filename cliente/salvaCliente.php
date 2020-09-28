@@ -42,12 +42,10 @@ if ($stm->execute()) {
         }
     }
     else {
-        echo "<p>Faiô</p>";
         header("location:../cliente/salvaCliente.php?error=salvaCarro");
     }
 
 
 } else {
-    echo "<p>Faiô</p>";
-    # header("location:../cliente/salvaCliente.php?error=salvaCarro");
+    header("location:../cliente/salvaCliente.php?error=salvaCarro");
 }

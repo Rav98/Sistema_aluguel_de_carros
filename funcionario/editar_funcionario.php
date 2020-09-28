@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 
+<?php
+include_once "../bd.php";
+$cpfCliente = $_POST['cpfFuncionario'];
+$query = "SELECT * FROM usuario where cpf = '$cpfCliente'";
+$stm = $db->prepare($query);
+if ($stm->execute()){
+    while ($row = $stm->fetch()){
+        $dataUsuario = $row['data_nascimento'];
+        $nomeUsuario = $row['nome'];
+        $cpfUsuario = $row['cpf'];
+        $cepUsuario = $row['cep'];
+        $ruaUsuario = $row['rua'];
+        $bairroUsuario = $row['bairro'];
+        $cidadeUsuario = $row['cidade'];
+        $senhaUsuario = $row['senha'];
+        $statusUsuario = $row['status'];
+        $codUsuario = $row['cod_usuario'];
+    }
+    $query = "SELECT * FROM funcionario where cod_func = '$codUsuario'";
+        $stm = $db->prepare($query);
+        if ($stm->execute()) {
+            while ($row = $stm->fetch()) {
+                $funcaoFuncionario = $row['funcao'];
+            }
+        }
+}
+?>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,6 +48,7 @@
  			}
 		}
     </script>
+
 </head>
 
 <body>
@@ -37,53 +65,59 @@
                     </div>
                     <h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
                     <div id="menu">
-                        <div id="divtitulocadastra">Criar uma conta no sistema</div>
+                        <div id="divtitulocadastra">Altera dados Funcionário</div>
                         <div id="wrapperlogin">
-                            <form enctype="multipart/form-data" method="POST" action="salvaFuncionario.php">
+                            <form enctype="multipart/form-data" method="POST" action="salvaEditaFuncionario.php">
+                                
+                                <label id="textocadastra">Código de Usuário:</label>
+                                <input readonly="true" type="text" id="campo" name="codUsuario" value="<?php print $codUsuario; ?>" />
+                                <br>
 
                                 <label id="textocadastra">Nome:</label>
-                                <input type="text" id="campo" name="nomeFuncionario" />
+                                <input type="text" id="campo" name="nomeFunc" value="<?php print $nomeUsuario; ?>" />
                                 <br>
 
                                 <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataFuncionario" />
+                                <input type="text" id="campodata" name="dataFunc" value="<?php print $dataUsuario; ?>"/>
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
-                                <input type="text" id="campo" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" name="cpfFuncionario" />
+                                <input readonly="true" type="text" id="campo" name="cpfFunc" value="<?php print $cpfCliente; ?>" />
                                 <br>
 
                                 <label id="textocadastra">CEP:</label>
-                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'##.###-###')" name="cepFuncionario" />
+                                <input type="text" id="campo" name="cepFunc" value="<?php print $cepUsuario; ?>"/>
                                 <br>
 
                                 <label id="textocadastra">Rua:</label>
-                                <input type="text" id="campo" name="ruaFuncionario" />
+                                <input type="text" id="campo" name="ruaFunc" value="<?php print $ruaUsuario; ?>"/>
                                 <br>
 
                                 <label id="textocadastra">Bairro:</label>
-                                <input type="text" id="campo" name="bairroFuncionario" />
+                                <input type="text" id="campo" name="bairroFunc" value="<?php print $bairroUsuario; ?>" />
                                 <br>
 
                                 <label id="textocadastra">Cidade:</label>
-                                <input type="text" id="campo" name="cidadeFuncionario" />
+                                <input type="text" id="campo" name="cidadeFunc" value="<?php print $cidadeUsuario; ?>"/>
                                 <br>
 
-                                <label id="textocadastra">Função:</label>
-                                <input type="text" id="campo" name="funcaoFuncionario" />
+                                <label id="textomotoristacleinte">Função:</label>
+                                <input type="text" id="campomotoristacleinte" name="funcaoFuncionario" value="<?php print $funcaoFuncionario; ?>"/>
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
-                                <input type="password" id="campo" name="senhaFuncionario" />
+                                <input type="text" id="campo" name="senhaFunc" value="<?php print $senhaUsuario; ?>"/>
                                 <br>
 
-                                <label id="textocadastra">Confirme a senha:</label>
-                                <input type="text" id="campo" />
+                                <label id="textocadastra">Status:</label>
+                                <input type="checkbox" id="campo" name="statusFunc" <?php if ($statusUsuario) {
+                                                                                                        echo "checked = 'checked'";
+                                                                                                    } ?> />
                                 <br>
 
                                 <div id="wrapper1">
                                     <button type="submit" id="botaoCadastro" class="button">
-                                        Confirmar cadastro no sistema
+                                        Confirmar edição
                                     </button>
 
                                     <button id="botaoCancelar" class="button" formaction="../index.php">
