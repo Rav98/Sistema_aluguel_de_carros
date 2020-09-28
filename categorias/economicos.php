@@ -65,20 +65,41 @@
 						$statusAutomovel = $row['status'];
 						$tipoAutomovel = $row['tipo'];
 
+						if ($direcaoAutomovel == 1){
+							$direcaoAutomovel = "Sim";
+						}else{
+							$direcaoAutomovel = "Não";
+						}
+
+						if ($ar_condicionadoAutomovel == 1){
+							$ar_condicionadoAutomovel = "Sim";
+						}else{
+							$ar_condicionadoAutomovel = "Não";
+						}
+
 						echo "<div> 
 				<div id='wrapper3'>
                 <div id='portfolio' class='container'>
                     <div class='column10'>
-						<div class='box'>
+						<div class='boxcar'>
 						
 							<span class='icon icon-wrench'></span>
 							
                             <form method='post' action='../carro/pesquisar_carros.php' >
-								
-							<h3>Placa:</h3><p>$placaAutomovel</p>
+							
+							<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
+							<h33><strong>Placa:  </strong>$placaAutomovel</h33>
+							<h33><strong>Cor:  </strong>$corAutomovel</h33>
+							<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>
+							<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>
+							<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
+							<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>
+							<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+							
+
 								
 								<button type='submit' id='botaofun1' class='button'>
-                                    Alterar Dados
+                                   Alugar 
 								
 								</button>
 
