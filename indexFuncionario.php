@@ -28,7 +28,7 @@
 					<h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
 					<div id="menu">
 						<ul>
-							<li class="current_page_item"><a href="index.php" accesskey="1" title="">Principal</a></li>
+							<li class="current_page_item"><a href="indexFuncionario.php" accesskey="1" title="">Principal</a></li>
 							<li><a href="login/login.php" accesskey="2" title="">Login</a></li>
 							<li><a href="categorias/economicos.php" accesskey="3" title="">Econômicos</a></li>
 							<li><a href="categorias/utilitarios.php" accesskey="4" title="">Utilitários</a></li>
@@ -50,35 +50,54 @@
 			<div id="wrapper3">
 				<div id="portfolio" class="container">
 					<div class="title">
-						<h2>Vantagens de se alugar um automóvel</h2>
+						<h2>Opções do sistema:</h2>
 					</div>
 					<div class="column1">
 						<div class="box">
 							<span class="icon icon-wrench"></span>
-							<h3>Não se preocupe com manutenção</h3>
-							<p>A manutenção é por conta nossa. Apenas preocupe-se em diigir!</p>
+							<form method="post" action="../carro/pesquisar_carros.php">
+								<h3>Alterar Dados dos carros</h3>
+								<p>Altere os dados dos carros cadastrados. Como: Status, Manutenção, etc.</p>
+								<button type="submit" id="botaofun1" class="button">
+									Alterar dados dos carros
+								</button>
+							</form>
 						</div>
 					</div>
 					<div class="column2">
 						<div class="box">
-							<span class="icon icon-trophy"></span>
-							<h3>Ganhe tempo, notoriedade e agilidade!</h3>
-							<p>Use o automóvel para poupar tempo, ganhar notoriedade e adigilidade!</p>
-
+							<span class="icon icon-file-alt"></span>
+							<form method="post" action="../carro/inserir_carros.php">
+								<h3>Inserir um carro na frota</h3>
+								<p>Insira um novo veiculo no sistema de gerenciamento!</p>
+								<button type="submit" id="botaofun2" class="button">
+									Inserir novo carro
+								</button>
+							</form>
 						</div>
 					</div>
 					<div class="column3">
 						<div class="box">
 							<span class="icon icon-key"></span>
-							<h3>Abra possibilidades!</h3>
-							<p>Um automóvel te dá possibilidades de momentos incriveis e inesquecíveis. Um onibus e um metro não... </p>
+							<form method="post" action="altera_conta.php">
+								<h3>Alterar meus dados</h3>
+								<p>Altere seus dados cadastrados. Como: Nome, CPF, etc.</p>
+								<button type="submit" id="botaofun2" class="button">
+									Alterar meus dados
+								</button>
+							</form>
 						</div>
 					</div>
 					<div class="column4">
 						<div class="box">
-							<span class="icon icon-lock"></span>
-							<h3>Sua viagem assegurada!</h3>
-							<p>Não se preocupe! Todos os automoveis têm seguro. Qualquer problema é só chamar!</p>
+							<span class="icon icon-laptop"></span>
+							<form method="post" action="../cliente/alterar_conta.php">
+								<h3>Alterar Dados dos clientes</h3>
+								<p>Altere os dados dos clientes. Como: Nome, CPF, etc.</p>
+								<button type="submit" id="botaofun2" class="button">
+									Alterar dados do cliente
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>

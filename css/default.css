@@ -432,6 +432,12 @@ ul.contact li a:before {
 	color: rgba(255, 255, 255, 0.2);
 }
 
+
+#copyright pp {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.2);
+}
+
 #copyright a {
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.4);
@@ -510,6 +516,8 @@ ul.contact li a:before {
 	color: rgba(0, 0, 0, 0.8);
 }
 
+
+
 .column1, .column2, .column3, .column4 {
 	width: 282px;
 }
@@ -525,6 +533,24 @@ ul.contact li a:before {
 
 .title {
 	text-align: center;
+}
+
+.column5, .column6, .column7, .column8 {
+	width: 282px;
+}
+
+.column5, .column6, .column7 {
+	float: left;
+	margin-right: 24px;
+}
+
+.column8 {
+	float: right;
+}
+
+.column10 {
+	float: right;
+	width: 282px;
 }
 
 /*********************************************************************************/
@@ -588,6 +614,13 @@ ul.contact li a:before {
 	border-top-color: #292929;
 }
 
+
+/*********************************************************************************/
+
+/* Textos                                                                        */
+
+/*********************************************************************************/
+
 #textologin {
 	margin-top: 3%;
 	margin-inline-end: 2%;
@@ -627,31 +660,6 @@ ul.contact li a:before {
 	display: inline-block;
 }
 
-#divtitulocadastra {
-	margin-right: 20%;
-	margin-left: 20%;
-	text-align: center;
-	margin-top: 3%;
-	letter-spacing: 0.20em;
-	font-size: 1.50em;
-	font-weight: 600;
-	text-transform: uppercase;
-	outline: 0;
-	color: #008080;
-	background:whitesmoke;
-}
-
-#campo {
-	border-radius: 15px;
-}
-
-#campodata {
-	position: absolute;
-	top: 538px;
-	left: 645px;
-	border-radius: 15px;
-}
-
 #textodata {
 	text-indent: 50px;
 	font-size: 100%;
@@ -669,11 +677,26 @@ ul.contact li a:before {
 	font-size: 1.00em;
 }
 
-#campomotoristacleinte {
-	position: absolute;
-	top: 830px;
-	left: 645px;
-	border-radius: 15px;
+
+
+/*********************************************************************************/
+
+/* Divs                                                                           */
+
+/*********************************************************************************/
+
+#divtitulocadastra {
+	margin-right: 20%;
+	margin-left: 20%;
+	text-align: center;
+	margin-top: 3%;
+	letter-spacing: 0.20em;
+	font-size: 1.50em;
+	font-weight: 600;
+	text-transform: uppercase;
+	outline: 0;
+	color: #008080;
+	background:whitesmoke;
 }
 
 #divcategoria{
@@ -695,3 +718,31 @@ ul.contact li a:before {
 	color:#FFF;
 	font-size: 1.30em;
 }
+
+
+/*********************************************************************************/
+
+/* Campos                                                                        */
+
+/*********************************************************************************/
+
+#campo {
+	border-radius: 15px;
+}
+
+#campodata {
+	position: absolute;
+	top: 538px;
+	left: 645px;
+	border-radius: 15px;
+}
+
+#campomotoristacleinte {
+	position: absolute;
+	top: 830px;
+	left: 645px;
+	border-radius: 15px;
+}
+
+
+

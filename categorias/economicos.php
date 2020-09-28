@@ -9,6 +9,8 @@
 	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
 	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 
@@ -36,63 +38,76 @@
 							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
 						</ul>
 					</div>
-					
+
 				</div>
 				<?php
-		include_once "../bd.php";
+				include_once "../bd.php";
 
-		#SQL para listagem
-		$query = "SELECT * FROM automovel WHERE tipo = 'Economico'";
-		$stm = $db->prepare($query);
+				#SQL para listagem
+				$query = "SELECT * FROM automovel WHERE tipo = 'Economico'";
+				$stm = $db->prepare($query);
 
-		#Executa o SQL
-		if ($stm->execute()) {
-			while ($row = $stm->fetch()) {
-				$placaAutomovel = $row['placa'];
-				$corAutomovel = $row['cor'];
-				$chassisAutomovel = $row['chassis'];
-				$direcaoAutomovel = $row['direcao_assistida'];
-				$ar_condicionadoAutomovel = $row['ar_condicionado'];
-				$manutencaoAutomovel = $row['manutencao'];
-				$nro_de_portaAutomovel = $row['nro_de_porta'];
-				$quilometragemAutomovel = $row['quilometragem'];
-				$transmissaoAutomovel = $row['transmissao'];
-				$marcaAutomovel = $row['marca'];
-				$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
-				$renavamAutomovel = $row['renavam'];
-				$statusAutomovel = $row['status'];
-				$tipoAutomovel = $row['tipo'];
-				
-				echo "<div id='divcategoria'> 
-							margem
-						<div id='divdealhes'>
-							 Marca: $marcaAutomovel
-							<br>
-							Placa: $placaAutomovel
-							<br>
-							Cor: $corAutomovel
-							<br>
-							Direção Assistida: $direcaoAutomovel
-							<br>
-							Ar condicionado: $ar_condicionadoAutomovel
-							<br>
-							Numero de portas: $nro_de_portaAutomovel
-							<br>
-							Quilometragem: $quilometragemAutomovel 
-							<br>
-							Trasmissão: $transmissaoAutomovel
-							<br>
-							Tipo de Combustivel: $tipo_de_combustivelAutomovel
-							<br>
-							</div>
-							margem
+				#Executa o SQL
+				if ($stm->execute()) {
+					while ($row = $stm->fetch()) {
+						$placaAutomovel = $row['placa'];
+						$corAutomovel = $row['cor'];
+						$chassisAutomovel = $row['chassis'];
+						$direcaoAutomovel = $row['direcao_assistida'];
+						$ar_condicionadoAutomovel = $row['ar_condicionado'];
+						$manutencaoAutomovel = $row['manutencao'];
+						$nro_de_portaAutomovel = $row['nro_de_porta'];
+						$quilometragemAutomovel = $row['quilometragem'];
+						$transmissaoAutomovel = $row['transmissao'];
+						$marcaAutomovel = $row['marca'];
+						$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
+						$renavamAutomovel = $row['renavam'];
+						$statusAutomovel = $row['status'];
+						$tipoAutomovel = $row['tipo'];
+
+						echo "<div> 
+				<div id='wrapper3'>
+                <div id='portfolio' class='container'>
+                    <div class='column10'>
+						<div class='box'>
+						
+							<span class='icon icon-wrench'></span>
+							
+                            <form method='post' action='../carro/pesquisar_carros.php' >
+								
+							<h3>Placa:</h3><p>$placaAutomovel</p>
+								
+								<button type='submit' id='botaofun1' class='button'>
+                                    Alterar Dados
+								
+								</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 							</div>";
-				
-			}
-		}
-		?>
+					}
+				}
+				?>
 			</div>
-		</div>	
+			<div id="espaço_container" class="container">
+				<div class="title">
+					<h2>Acesse nossas redes sociais!</h2>
+					<span class="byline">Estamos sempre a disposição de nossos clientes!</span>
+				</div>
+				<ul class="contact">
+					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+					<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+					<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+					<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+				</ul>
+				<div id="espaço_container" class="container">
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 
