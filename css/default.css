@@ -677,15 +677,21 @@ ul.contact li a:before {
 }
 
 #divcategoria{
-	margin-right: 20%;
-	margin-left: 20%;
-	text-align: center;
-	margin-top: 3%;
-	letter-spacing: 0.20em;
-	font-size: 1.50em;
-	font-weight: 600;
-	text-transform: uppercase;
-	outline: 0;
-	color: #008080;
-	background:whitesmoke;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-block-end: 2%;
+	background-color:steelblue;
+	color:steelblue;
+	border-radius: 15px;
+}
+
+#divdealhes{
+	text-align: initial;
+	text-rendering: geometricPrecision;
+	margin-right: 2%;
+	margin-left: 2%;
+	border-radius: 20px;
+	background-color: darkcyan;
+	color:#FFF;
+	font-size: 1.30em;
 }

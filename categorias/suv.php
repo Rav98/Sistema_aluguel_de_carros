@@ -37,8 +37,61 @@
 						</ul>
 					</div>
 				</div>
+				<?php
+		include_once "../bd.php";
+
+		#SQL para listagem
+		$query = "SELECT * FROM automovel WHERE tipo = 'SUV'";
+		$stm = $db->prepare($query);
+
+		#Executa o SQL
+		if ($stm->execute()) {
+			while ($row = $stm->fetch()) {
+				$placaAutomovel = $row['placa'];
+				$corAutomovel = $row['cor'];
+				$chassisAutomovel = $row['chassis'];
+				$direcaoAutomovel = $row['direcao_assistida'];
+				$ar_condicionadoAutomovel = $row['ar_condicionado'];
+				$manutencaoAutomovel = $row['manutencao'];
+				$nro_de_portaAutomovel = $row['nro_de_porta'];
+				$quilometragemAutomovel = $row['quilometragem'];
+				$transmissaoAutomovel = $row['transmissao'];
+				$marcaAutomovel = $row['marca'];
+				$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
+				$renavamAutomovel = $row['renavam'];
+				$statusAutomovel = $row['status'];
+				$tipoAutomovel = $row['tipo'];
+				
+				echo "<div id='divcategoria'> 
+							margem
+						<div id='divdealhes'>
+							 Marca: $marcaAutomovel
+							<br>
+							Placa: $placaAutomovel
+							<br>
+							Cor: $corAutomovel
+							<br>
+							Direção Assistida: $direcaoAutomovel
+							<br>
+							Ar condicionado: $ar_condicionadoAutomovel
+							<br>
+							Numero de portas: $nro_de_portaAutomovel
+							<br>
+							Quilometragem: $quilometragemAutomovel 
+							<br>
+							Trasmissão: $transmissaoAutomovel
+							<br>
+							Tipo de Combustivel: $tipo_de_combustivelAutomovel
+							<br>
+							</div>
+							margem
+							</div>";
+				
+			}
+		}
+		?>
 			</div>
-		</div>
+		</div>	
 	</div>
 </body>
 

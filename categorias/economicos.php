@@ -36,11 +36,9 @@
 							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
 						</ul>
 					</div>
+					
 				</div>
-			</div>
-		</div>
-
-		<?php
+				<?php
 		include_once "../bd.php";
 
 		#SQL para listagem
@@ -65,19 +63,18 @@
 				$statusAutomovel = $row['status'];
 				$tipoAutomovel = $row['tipo'];
 				
-				echo "<div id='divcategoria'> Marca: $marcaAutomovel
+				echo "<div id='divcategoria'> 
+							margem
+						<div id='divdealhes'>
+							 Marca: $marcaAutomovel
 							<br>
 							Placa: $placaAutomovel
 							<br>
 							Cor: $corAutomovel
 							<br>
-							Chassis: $chassisAutomovel
+							Direção Assistida: $direcaoAutomovel
 							<br>
-							Direção: $direcaoAutomovel
-							<br>
-							Ar_condicionado: $ar_condicionadoAutomovel
-							<br>
-							Manutenção: $manutencaoAutomovel
+							Ar condicionado: $ar_condicionadoAutomovel
 							<br>
 							Numero de portas: $nro_de_portaAutomovel
 							<br>
@@ -87,13 +84,15 @@
 							<br>
 							Tipo de Combustivel: $tipo_de_combustivelAutomovel
 							<br>
-							Renavam: $renavamAutomovel
+							</div>
+							margem
 							</div>";
 				
 			}
 		}
 		?>
-
+			</div>
+		</div>	
 	</div>
 </body>
 
