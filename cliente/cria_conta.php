@@ -10,6 +10,18 @@
     <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+    <!--- Esta funcao formata mascara dos inputs-->
+    <script type="text/javascript">
+			function formatar_mascara(src, mascara) {
+ 			var campo = src.value.length;
+ 			var saida = mascara.substring(0,1);
+ 			var texto = mascara.substring(campo);
+ 			if(texto.substring(0,1) != saida) {
+ 			src.value += texto.substring(0,1);
+ 			}
+		}
+    </script>
+
 </head>
 
 <body>
@@ -28,22 +40,22 @@
                     <div id="menu">
                         <div id="divtitulocadastra">Criar uma conta no sistema:Cliente</div>
                         <div id="wrapperlogin">
-                            <form enctype="multipart/form-data" method="POST" action="salvaConta.php">
+                            <form enctype="multipart/form-data" method="POST" action="../cliente/salvaCliente.php">
 
                                 <label id="textocadastra">Nome:</label>
                                 <input type="text" id="campo" name="nomeCliente" />
                                 <br>
 
-                                <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" name="dataCliente" />
+                                <label id="textodata">Data de nascimento (AAAA-MM-DD):</label>
+                                <input type="text" id="campodata" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataCliente" />
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
-                                <input type="text" id="campo" name="cpfCliente" />
+                                <input type="text" id="campo" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" name="cpfCliente" />
                                 <br>
 
                                 <label id="textocadastra">CEP:</label>
-                                <input type="text" id="campo" name="cepCliente" />
+                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'##.###-###')" name="cepCliente" />
                                 <br>
 
                                 <label id="textocadastra">Rua:</label>
@@ -59,15 +71,15 @@
                                 <br>
 
                                 <label id="textomotoristacleinte">Carteira de Motorista:</label>
-                                <input type="text" id="campomotoristacleinte" name="carteiraMotoraCliente" />
+                                <input type="text" maxlenght="11" id="campomotoristacleinte" name="carteiraMotoraCliente" />
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
-                                <input type="text" id="campo" name="senhaCliente" />
+                                <input type="password" id="campo" name="senhaCliente" />
                                 <br>
 
                                 <label id="textocadastra">Confirme a senha:</label>
-                                <input type="text" id="campo" />
+                                <input type="password" id="campo" />
                                 <br>
 
                                 <div id="wrapper1">
