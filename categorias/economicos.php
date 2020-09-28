@@ -64,13 +64,32 @@
 				$renavamAutomovel = $row['renavam'];
 				$statusAutomovel = $row['status'];
 				$tipoAutomovel = $row['tipo'];
-
-				echo "<div> Placa: </div>";
-				print $placaAutomovel;
-				echo "<div> Cor: </div>";
-				print $corAutomovel;
-				echo "<div> chassis: </div>";
-				print $chassisAutomovel;
+				
+				echo "<div id='divcategoria'> Marca: $marcaAutomovel
+							<br>
+							Placa: $placaAutomovel
+							<br>
+							Cor: $corAutomovel
+							<br>
+							Chassis: $chassisAutomovel
+							<br>
+							Direção: $direcaoAutomovel
+							<br>
+							Ar_condicionado: $ar_condicionadoAutomovel
+							<br>
+							Manutenção: $manutencaoAutomovel
+							<br>
+							Numero de portas: $nro_de_portaAutomovel
+							<br>
+							Quilometragem: $quilometragemAutomovel 
+							<br>
+							Trasmissão: $transmissaoAutomovel
+							<br>
+							Tipo de Combustivel: $tipo_de_combustivelAutomovel
+							<br>
+							Renavam: $renavamAutomovel
+							</div>";
+				
 			}
 		}
 		?>

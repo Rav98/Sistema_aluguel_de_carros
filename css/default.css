@@ -675,3 +675,17 @@ ul.contact li a:before {
 	left: 645px;
 	border-radius: 15px;
 }
+
+#divcategoria{
+	margin-right: 20%;
+	margin-left: 20%;
+	text-align: center;
+	margin-top: 3%;
+	letter-spacing: 0.20em;
+	font-size: 1.50em;
+	font-weight: 600;
+	text-transform: uppercase;
+	outline: 0;
+	color: #008080;
+	background:whitesmoke;
+}
