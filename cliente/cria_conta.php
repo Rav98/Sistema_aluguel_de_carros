@@ -46,8 +46,9 @@
                                 <input type="text" id="campo" name="nomeCliente" />
                                 <br>
 
-                                <label id="textodata">Data de nascimento (AAAA-MM-DD):</label>
-                                <input type="text" id="campodata" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataCliente" />
+                                <label id="textocadastra">Data de nascimento (A-M-D):</label>
+                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataCliente" />
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
@@ -70,8 +71,9 @@
                                 <input type="text" id="campo" name="cidadeCliente" />
                                 <br>
 
-                                <label id="textomotoristacleinte">Carteira de Motorista:</label>
-                                <input type="text" maxlenght="11" id="campomotoristacleinte" name="carteiraMotoraCliente" />
+                                <label id="textocadastra">Carteira de Motorista:</label>
+                                <input type="text" maxlenght="11" id="campo" name="carteiraMotoraCliente" />
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
@@ -80,6 +82,7 @@
 
                                 <label id="textocadastra">Confirme a senha:</label>
                                 <input type="password" id="campo" />
+                                <br>
                                 <br>
 
                                 <div id="wrapper1">

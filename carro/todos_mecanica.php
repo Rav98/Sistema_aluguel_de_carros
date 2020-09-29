@@ -10,6 +10,7 @@
 	<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 
@@ -31,7 +32,7 @@
 							<li><a href="../index.php" accesskey="1" title="">Principal</a></li>
 							<li><a href="../login/login.php" accesskey="2" title="">Login</a></li>
 							<li><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
-							<li class="current_page_item"><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
+							<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
 							<li><a href="suv.php" accesskey="5" title="">SUV</a></li>
 							<li><a href="luxo.php" accesskey="6" title="">Luxo</a></li>
 							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
@@ -41,7 +42,7 @@
 					include_once "../bd.php";
 
 					#SQL para listagem
-					$query = "SELECT * FROM automovel WHERE tipo = 'Utilitario'";
+					$query = "SELECT * FROM automovel WHERE manutencao = '1' ";
 					$stm = $db->prepare($query);
 
 					#Executa o SQL
@@ -62,6 +63,32 @@
 							$statusAutomovel = $row['status'];
 							$tipoAutomovel = $row['tipo'];
 
+							if ($direcaoAutomovel == 1) {
+								$direcaoAutomovel = "SIM";
+							} else {
+								$direcaoAutomovel = "NÃO";
+							}
+
+							if ($ar_condicionadoAutomovel == 1) {
+								$ar_condicionadoAutomovel = "SIM";
+							} else {
+								$ar_condicionadoAutomovel = "NÃO";
+                            }
+
+                            if ($statusAutomovel == 1) {
+								$statusAutomovel = "Ativo na frota";
+							} else {
+								$statusAutomovel = "Inativo na frota";
+                            }
+
+                            if ($manutencaoAutomovel == 1) {
+								$manutencaoAutomovel = "SIM";
+							} else {
+								$manutencaoAutomovel = "NÃO";
+                            }
+                            
+
+
 							echo " 
 				<div id='wrapper_carros'>
 
@@ -71,9 +98,9 @@
 					
 						<div class='boxcar'>
 						
-							<span class='icon icon-shopping-cart'></span>
+							<span class='icon icon-wrench'></span>
 							
-                            <form method='post' action='../carro/alugar_carro' >
+                            <form method='post' action='../carro/edita_carros.php' >
 							
 							<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
 							
@@ -86,15 +113,25 @@
 							<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>
 						
 							<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
-
-							<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>
 						
 							<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>
 						
-							<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+                            <h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+                           
+                            <h33><strong>Renavam:  </strong>$renavamAutomovel</h33>
+
+                            <h33><strong>Chassis:  </strong>$chassisAutomovel</h33>
+
+                            <h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>
+                            
+                            <h33><strong>Manuenteção: </strong>$manutencaoAutomovel</h33>
+                            
+                            <h33><strong>Status:  </strong>$statusAutomovel</h33>
+
+                            
 						
 						    <button type='submit' id='botaofun1' class='button'>
-                                Alugar 
+                                Retirar da Manutenção 
 							</button>
 
                             </form>
@@ -122,7 +159,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </body>

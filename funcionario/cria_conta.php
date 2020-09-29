@@ -45,8 +45,9 @@
                                 <input type="text" id="campo" name="nomeFuncionario" />
                                 <br>
 
-                                <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataFuncionario" />
+                                <label id="textocadastra">Data de nascimento (A-M-D):</label>
+                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataFuncionario" />
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
@@ -79,6 +80,7 @@
 
                                 <label id="textocadastra">Confirme a senha:</label>
                                 <input type="text" id="campo" />
+                                <br>
                                 <br>
 
                                 <div id="wrapper1">

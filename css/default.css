@@ -43,6 +43,11 @@ a:hover {
 	width: 1200px;
 }
 
+.container_carros {
+	display: inline-block;
+
+}
+
 /*********************************************************************************/
 
 /* Form Style                                                                    */
@@ -367,10 +372,9 @@ ul.contact li a:before {
 	background: #008080;
 }
 
-#wrapper33 {
-	overflow: hidden;
-	padding: 0em 0em 8em 0em;
+#wrapper_carros {
 	background: #FFF;
+
 }
 
 /*********************************************************************************/
@@ -660,6 +664,7 @@ ul.contact li a:before {
 	display: inline-block;
 }
 
+
 #textocadastracheck {
 	margin-top: 3%;
 	margin-inline-end: 2%;
@@ -671,23 +676,6 @@ ul.contact li a:before {
 	width: 100px;
 	height: 10px;
 	display: inline-block;
-}
-
-#textodata {
-	text-indent: 50px;
-	font-size: 100%;
-	color: #FFF;
-	text-align: left;
-	font-size: 1.00em;
-}
-
-#textomotoristacleinte {
-	text-indent: 160px;
-	margin-top: 10px;
-	font-size: 100%;
-	color: #FFF;
-	text-align: left;
-	font-size: 1.00em;
 }
 
 
@@ -742,20 +730,3 @@ ul.contact li a:before {
 #campo {
 	border-radius: 15px;
 }
-
-#campodata {
-	position: absolute;
-	top: 538px;
-	left: 645px;
-	border-radius: 15px;
-}
-
-#campomotoristacleinte {
-	position: absolute;
-	top: 830px;
-	left: 645px;
-	border-radius: 15px;
-}
-
-
-

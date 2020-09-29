@@ -38,94 +38,101 @@
 							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
 						</ul>
 					</div>
+					<?php
+					include_once "../bd.php";
 
-				</div>
-				<?php
-				include_once "../bd.php";
+					#SQL para listagem
+					$query = "SELECT * FROM automovel WHERE tipo = 'Economico'";
+					$stm = $db->prepare($query);
 
-				#SQL para listagem
-				$query = "SELECT * FROM automovel WHERE tipo = 'Economico'";
-				$stm = $db->prepare($query);
+					#Executa o SQL
+					if ($stm->execute()) {
+						while ($row = $stm->fetch()) {
+							$placaAutomovel = $row['placa'];
+							$corAutomovel = $row['cor'];
+							$chassisAutomovel = $row['chassis'];
+							$direcaoAutomovel = $row['direcao_assistida'];
+							$ar_condicionadoAutomovel = $row['ar_condicionado'];
+							$manutencaoAutomovel = $row['manutencao'];
+							$nro_de_portaAutomovel = $row['nro_de_porta'];
+							$quilometragemAutomovel = $row['quilometragem'];
+							$transmissaoAutomovel = $row['transmissao'];
+							$marcaAutomovel = $row['marca'];
+							$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
+							$renavamAutomovel = $row['renavam'];
+							$statusAutomovel = $row['status'];
+							$tipoAutomovel = $row['tipo'];
 
-				#Executa o SQL
-				if ($stm->execute()) {
-					while ($row = $stm->fetch()) {
-						$placaAutomovel = $row['placa'];
-						$corAutomovel = $row['cor'];
-						$chassisAutomovel = $row['chassis'];
-						$direcaoAutomovel = $row['direcao_assistida'];
-						$ar_condicionadoAutomovel = $row['ar_condicionado'];
-						$manutencaoAutomovel = $row['manutencao'];
-						$nro_de_portaAutomovel = $row['nro_de_porta'];
-						$quilometragemAutomovel = $row['quilometragem'];
-						$transmissaoAutomovel = $row['transmissao'];
-						$marcaAutomovel = $row['marca'];
-						$tipo_de_combustivelAutomovel = $row['tipo_de_combustivel'];
-						$renavamAutomovel = $row['renavam'];
-						$statusAutomovel = $row['status'];
-						$tipoAutomovel = $row['tipo'];
+							if ($direcaoAutomovel == 1) {
+								$direcaoAutomovel = "Sim";
+							} else {
+								$direcaoAutomovel = "Não";
+							}
 
-						if ($direcaoAutomovel == 1){
-							$direcaoAutomovel = "Sim";
-						}else{
-							$direcaoAutomovel = "Não";
-						}
+							if ($ar_condicionadoAutomovel == 1) {
+								$ar_condicionadoAutomovel = "Sim";
+							} else {
+								$ar_condicionadoAutomovel = "Não";
+							}
 
-						if ($ar_condicionadoAutomovel == 1){
-							$ar_condicionadoAutomovel = "Sim";
-						}else{
-							$ar_condicionadoAutomovel = "Não";
-						}
+							echo " 
+				<div id='wrapper_carros'>
 
-						echo "<div> 
-				<div id='wrapper33'>
-                <div id='portfolio' class='container'>
-                    <div class='column10'>
+				<div id='portfolio' class='container_carros'>
+				
+					<div class='column10'>
+					
 						<div class='boxcar'>
 						
-							<span class='icon icon-wrench'></span>
+							<span class='icon icon-shopping-cart'></span>
 							
-                            <form method='post' action='../carro/pesquisar_carros.php' >
+                            <form method='post' action='../carro/alugar_carro' >
 							
 							<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
-							<h33><strong>Placa:  </strong>$placaAutomovel</h33>
-							<h33><strong>Cor:  </strong>$corAutomovel</h33>
-							<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>
-							<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>
-							<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
-							<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>
-							<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
 							
+							<h33><strong>Placa:  </strong>$placaAutomovel</h33>
+							
+							<h33><strong>Cor:  </strong>$corAutomovel</h33>
+							
+							<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>
+							
+							<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>
+						
+							<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
 
-								
-								<button type='submit' id='botaofun1' class='button'>
-                                   Alugar 
-								
-								</button>
+							<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>
+						
+							<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>
+						
+							<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+						
+						    <button type='submit' id='botaofun1' class='button'>
+                                Alugar 
+							</button>
 
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
-							</div>";
+            </div>";
+						}
 					}
-				}
-				?>
-			</div>
-			<div id="espaço_container" class="container">
-				<div class="title">
-					<h2>Acesse nossas redes sociais!</h2>
-					<span class="byline">Estamos sempre a disposição de nossos clientes!</span>
+					?>
 				</div>
-				<ul class="contact">
-					<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-					<li><a href="#" class="icon icon-facebook"><span></span></a></li>
-					<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-					<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-					<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-				</ul>
 				<div id="espaço_container" class="container">
+					<div class="title">
+						<h2>Acesse nossas redes sociais!</h2>
+						<span class="byline">Estamos sempre a disposição de nossos clientes!</span>
+					</div>
+					<ul class="contact">
+						<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+						<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+						<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+						<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+						<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+					</ul>
+					<div id="espaço_container" class="container">
+					</div>
 				</div>
 			</div>
 		</div>

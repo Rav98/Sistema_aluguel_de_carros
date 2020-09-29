@@ -71,17 +71,19 @@ if ($stm->execute()){
                         <div id="divtitulocadastra">Altera dados Cliente</div>
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="salvaEditaCliente.php">
-                                
+                               
                                 <label id="textocadastra">Código de Usuário:</label>
                                 <input readonly="true" type="text" id="campo" name="codUsuario" value="<?php print $codUsuario; ?>" />
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">Nome:</label>
                                 <input type="text" id="campo" name="nomeCliente" value="<?php print $nomeUsuario; ?>" />
                                 <br>
 
-                                <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" name="dataCliente" value="<?php print $dataUsuario; ?>"/>
+                                <label id="textocadastra">Data de nascimento (A-M-D):</label>
+                                <input type="text" id="campo" name="dataCliente" value="<?php print $dataUsuario; ?>"/>
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
@@ -104,18 +106,21 @@ if ($stm->execute()){
                                 <input type="text" id="campo" name="cidadeCliente" value="<?php print $cidadeUsuario; ?>"/>
                                 <br>
 
-                                <label id="textomotoristacleinte">Carteira de Motorista:</label>
-                                <input type="text" id="campomotoristacleinte" name="carteiraCliente" value="<?php print $carteiraCliente; ?>"/>
+                                <label id="textocadastra">Carteira de Motorista:</label>
+                                <input type="text" id="campo" name="carteiraCliente" value="<?php print $carteiraCliente; ?>"/>
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
                                 <input type="text" id="campo" name="senhaCliente" value="<?php print $senhaUsuario; ?>"/>
                                 <br>
+                                
 
                                 <label id="textocadastra">Status:</label>
                                 <input type="checkbox" id="campo" name="statusCliente" <?php if ($statusUsuario) {
                                                                                                         echo "checked = 'checked'";
                                                                                                     } ?> />
+                                <br>
                                 <br>
 
                                 <div id="wrapper1">

@@ -29,17 +29,19 @@
                         <div id="divtitulocadastra">Alocar Carro</div>
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="editar_carros.php">
-
+                                <br>
                                 <label id="textocadastra">Placa:</label>
                                 <input type="text" id="campo" name="placaAutomovel" />
                                 <br>
 
-                                <label id="textocadastra">Data Locação:(AAAA-MM-DD)</label>
+                                <label id="textocadastra">Data Locação:(A-M-D)</label>
                                 <input type="text" id="campo" name="dataLocacao" />
                                 <br>
 
-                                <label id="textocadastra">Data Devolução:(AAAA-MM-DD)</label>
+                                <label id="textocadastra">Data Devolução: (A-M-D)</label>
                                 <input type="text" id="campo" name="dataDevolucao" />
+                                <br>
+                                <br>
                                 <br>
 
                             

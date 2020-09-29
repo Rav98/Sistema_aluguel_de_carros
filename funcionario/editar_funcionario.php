@@ -69,16 +69,19 @@ if ($stm->execute()){
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="salvaEditaFuncionario.php">
                                 
+                                
                                 <label id="textocadastra">Código de Usuário:</label>
                                 <input readonly="true" type="text" id="campo" name="codUsuario" value="<?php print $codUsuario; ?>" />
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">Nome:</label>
                                 <input type="text" id="campo" name="nomeFunc" value="<?php print $nomeUsuario; ?>" />
                                 <br>
 
-                                <label id="textodata">Data de nascimento (DD-MM-AAAA):</label>
-                                <input type="text" id="campodata" name="dataFunc" value="<?php print $dataUsuario; ?>"/>
+                                <label id="textocadastra">Data de nascimento (A-D-M):</label>
+                                <input type="text" id="campo" name="dataFunc" value="<?php print $dataUsuario; ?>"/>
+                                <br>
                                 <br>
 
                                 <label id="textocadastra">CPF:</label>
@@ -101,8 +104,8 @@ if ($stm->execute()){
                                 <input type="text" id="campo" name="cidadeFunc" value="<?php print $cidadeUsuario; ?>"/>
                                 <br>
 
-                                <label id="textomotoristacleinte">Função:</label>
-                                <input type="text" id="campomotoristacleinte" name="funcaoFuncionario" value="<?php print $funcaoFuncionario; ?>"/>
+                                <label id="textocadastra">Função:</label>
+                                <input type="text" id="campo" name="funcaoFuncionario" value="<?php print $funcaoFuncionario; ?>"/>
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
@@ -113,6 +116,7 @@ if ($stm->execute()){
                                 <input type="checkbox" id="campo" name="statusFunc" <?php if ($statusUsuario) {
                                                                                                         echo "checked = 'checked'";
                                                                                                     } ?> />
+                                <br>
                                 <br>
 
                                 <div id="wrapper1">
