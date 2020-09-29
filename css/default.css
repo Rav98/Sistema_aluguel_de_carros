@@ -367,6 +367,12 @@ ul.contact li a:before {
 	background: #008080;
 }
 
+#wrapper33 {
+	overflow: hidden;
+	padding: 0em 0em 8em 0em;
+	background: #FFF;
+}
+
 /*********************************************************************************/
 
 /* Welcome                                                                       */

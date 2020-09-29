@@ -78,7 +78,7 @@
 						}
 
 						echo "<div> 
-				<div id='wrapper3'>
+				<div id='wrapper33'>
                 <div id='portfolio' class='container'>
                     <div class='column10'>
 						<div class='boxcar'>
