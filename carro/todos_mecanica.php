@@ -100,7 +100,7 @@
 						
 							<span class='icon icon-wrench'></span>
 							
-                            <form method='post' action='carro/edita_carros.php' >
+                            <form method='post' action='carro/tira_mecanica.php' >
 							
 							<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
 							
