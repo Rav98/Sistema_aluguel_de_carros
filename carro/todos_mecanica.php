@@ -104,7 +104,7 @@
 							
 								<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
 								
-								<h33><strong>Placa:  </strong>$placaAutomovel</h33>
+								<h33><strong>Placa:  </strong> <input readonly='true' type='text' id='campo' name='placaAutomovel' value='$placaAutomovel'/>  </h33>
 								
 								<h33><strong>Cor:  </strong>$corAutomovel</h33>
 								
