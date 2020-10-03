@@ -28,11 +28,15 @@ if ($row = $stm -> fetch()) {
 	$_SESSION['cidade'] = $row['cidade'];
 	$_SESSION['cep'] = $row['cep'];
 	$_SESSION['status'] = $row['status'];
+	$_SESSION['tipo'] = $row['tipo'];
 	
-	
+
 	
 	// Redirecionando para a pagina inicial.
-	header("location:../index.php");
+	if($_SESSION['tipo'] == 'C'){
+		header("location:../indexCliente.php");
+	}
+	
 } else {
 	header("location:login.php?error=login");
 }

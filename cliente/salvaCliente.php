@@ -19,7 +19,9 @@ $statusCliente = 1;
 
 
 # Query de inserção:
-$query = "INSERT INTO usuario VALUES ('$dataCliente', '$nomeCliente', '$cpfCliente', '$ruaCliente', '$bairroCliente', '$cidadeCliente', '$cepCliente', '$statusCliente', '$senhaCliente', 'C')";
+$query = "INSERT INTO usuario
+(data_nascimento, nome, cpf, rua, bairro, cidade, cep, status, senha, tipo) 
+VALUES ('$dataCliente', '$nomeCliente', '$cpfCliente', '$ruaCliente', '$bairroCliente', '$cidadeCliente', '$cepCliente', '$statusCliente', '$senhaCliente', 'C')";
 $stm = $db->prepare($query);
 
 
@@ -38,14 +40,14 @@ if ($stm->execute()) {
             header("location:../index.php");
         }
         else {
-            header("location:../cliente/salvaCliente.php?error=salvaCarro");
+            header("location:../cliente/salvaCliente.php?error=salvaCliente");
         }
     }
     else {
-        header("location:../cliente/salvaCliente.php?error=salvaCarro");
+        header("location:../cliente/salvaCliente.php?error=salvaCliente");
     }
 
 
 } else {
-    header("location:../cliente/salvaCliente.php?error=salvaCarro");
+    header("location:../cliente/salvaCliente.php?error=salvaCliente");
 }
