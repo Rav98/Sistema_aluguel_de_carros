@@ -2,6 +2,12 @@
 // Inicia a sessao.
 session_start();
 
+
+#Função JavaScript para alerta:
+function phpAlert($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+
 // Pegando os dados de login enviados.
 $usuario = $_POST['cpf'];
 $senha = $_POST['senha'];
@@ -41,5 +47,6 @@ if ($row = $stm -> fetch()) {
 	}
 	
 } else {
-	header("location:login.php?error=login");
+	phpAlert("Usuário ou senha incorretos. Tente novamente.");
+	header("location:login.php");
 }

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
 <?php
+// Inicia a sessão.
+session_start();
+
+
 include_once "../bd.php";
-$cpfCliente = $_POST['cpfFuncionario'];
+$cpfCliente = $_SESSION['cpf'];
 $query = "SELECT * FROM usuario where cpf = '$cpfCliente'";
 $stm = $db->prepare($query);
 if ($stm->execute()){
