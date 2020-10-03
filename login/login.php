@@ -10,6 +10,18 @@
 	<link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
 
+	<!--- Esta funcao formata mascara dos inputs-->
+    <script type="text/javascript">
+		function formatar_mascara(src, mascara) {
+ 			var campo = src.value.length;
+ 			var saida = mascara.substring(0,1);
+ 			var texto = mascara.substring(campo);
+ 			if(texto.substring(0,1) != saida) {
+ 			src.value += texto.substring(0,1);
+ 			}
+		}
+    </script>
+
 </head>
 
 <body>
@@ -42,7 +54,7 @@
 				<form method="post" action="confirmalogin.php">
 
 					<label id="textologin" >CPF:</label>
-					<input type="text" name="cpf" />
+					<input type="text" name="cpf" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" />
 
 					<br>
 

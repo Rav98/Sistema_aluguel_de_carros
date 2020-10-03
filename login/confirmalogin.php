@@ -30,7 +30,8 @@ if ($row = $stm -> fetch()) {
 	$_SESSION['status'] = $row['status'];
 	
 	
-	// Redirecionando para a p�gina inicial.
+	
+	// Redirecionando para a pagina inicial.
 	header("location:../index.php");
 } else {
 	header("location:login.php?error=login");

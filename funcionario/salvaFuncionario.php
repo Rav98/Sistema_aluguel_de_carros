@@ -19,7 +19,7 @@ $statusFuncionario = 1;
 
 
 # Query de inserção:
-$query = "INSERT INTO usuario VALUES ('$dataFuncionario', '$nomeFuncionario', '$cpfFuncionario', '$ruaFuncionario', '$bairroFuncionario', '$cidadeFuncionario', '$cepFuncionario', '$statusFuncionario', '$senhaFuncionario')";
+$query = "INSERT INTO usuario VALUES ('$dataFuncionario', '$nomeFuncionario', '$cpfFuncionario', '$ruaFuncionario', '$bairroFuncionario', '$cidadeFuncionario', '$cepFuncionario', '$statusFuncionario', '$senhaFuncionario', 'F')";
 $stm = $db->prepare($query);
 
 
