@@ -36,6 +36,9 @@ if ($row = $stm -> fetch()) {
 	if($_SESSION['tipo'] == 'C'){
 		header("location:../indexCliente.php");
 	}
+	if($_SESSION['tipo'] == 'F'){
+		header ("location:../indexFuncionario.php");
+	}
 	
 } else {
 	header("location:login.php?error=login");

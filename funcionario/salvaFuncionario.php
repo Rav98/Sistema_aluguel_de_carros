@@ -21,12 +21,14 @@ $statusFuncionario = 1;
 # Query de inserção:
 $query = "INSERT INTO usuario
 (data_nascimento, nome, cpf, rua, bairro, cidade, cep, status, senha, tipo) 
-VALUES ('$dataCliente', '$nomeCliente', '$cpfCliente', '$ruaCliente', '$bairroCliente', '$cidadeCliente', '$cepCliente', '$statusCliente', '$senhaCliente', 'C')";
+VALUES ('$dataFuncionario', '$nomeFuncionario', '$cpfFuncionario', '$ruaFuncionario', '$bairroFuncionario', '$cidadeFuncionario', '$cepFuncionario', '$statusFuncionario', '$senhaFuncionario', 'F')";
+# print "<p>$query</p>";
 $stm = $db->prepare($query);
 
 if ($stm->execute()) {
     # Atributo cod_usuario eh autoincrement. Resgata-se ele na proxima query:
     $query = "SELECT cod_usuario FROM usuario WHERE cpf = '$cpfFuncionario'";
+    # print "<p>query</p>";
     $stm = $db->prepare($query);
     if ($stm->execute()) {
         while ($row = $stm->fetch()) {
@@ -39,14 +41,14 @@ if ($stm->execute()) {
             header("location:../index.php");
         }
         else {
-            header("location:../funcionario/salvaFuncionario.php?error=salvaCarro");
+            header("location:../funcionario/salvaFuncionario.php?error=salvaFuncionario");
         }
     }
     else {
-        header("location:../funcionario/salvaFuncionario.php?error=salvaCarro");
+        header("location:../funcionario/salvaFuncionario.php?error=salvaFuncionario");
     }
 
 
 } else {
-    header("location:../funcionario/salvaFuncionario.php?error=salvaCarro");
+    #header("location:../funcionario/salvaFuncionario.php?error=salvaFuncionario");
 }

@@ -45,7 +45,7 @@
                                 <input type="text" id="campo" name="nomeFuncionario" />
                                 <br>
 
-                                <label id="textocadastra">Data de nascimento (A-M-D):</label>
+                                <label id="textocadastra">Data de nascimento (AAAA-MM-DD):</label>
                                 <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataFuncionario" />
                                 <br>
                                 <br>
@@ -79,7 +79,7 @@
                                 <br>
 
                                 <label id="textocadastra">Confirme a senha:</label>
-                                <input type="text" id="campo" />
+                                <input type="password" id="campo" />
                                 <br>
                                 <br>
 

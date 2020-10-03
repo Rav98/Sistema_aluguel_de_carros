@@ -3,6 +3,14 @@
 <?php
 // Inicia a sessão.
 session_start();
+
+if (isset($_SESSION['cpf'])) {
+	$cpf = $_SESSION['cpf'];
+	$tipo = $_SESSION['tipo'];
+}
+else{
+	$tipo = '';
+}
 ?>
 
 <head>
@@ -32,14 +40,26 @@ session_start();
 					<h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
 					<div id="menu">
 						<ul>
-							<li class="current_page_item"><a href="index.php" accesskey="1" title="">Principal</a></li>
-							<?php if (isset($_SESSION['cpf'])) {
-										print "<li><a href='login/logout.php' accesskey='2' title=''>Logout</a></li>";
-									}
-									else {
-										print "<li><a href='login/login.php' accesskey='2' title=''>Login</a></li>";
-									}
-								?>
+							<?php
+								if($tipo = 'F'){
+									print "<li class='current_page_item'><a href='indexFuncionario.php' accesskey='1' title=''>Principal</a></li>";
+								}
+								else if ($tipo = 'C'){
+									print "<li class='current_page_item'><a href='indexCliente.php' accesskey='1' title=''>Principal</a></li>";
+								}
+								else{
+									print "<li class='current_page_item'><a href='index.php' accesskey='1' title=''>Principal</a></li>";
+								}
+								
+							?>
+							<?php 
+								if (isset($_SESSION['cpf'])) {
+									print "<li><a href='login/logout.php' accesskey='2' title=''>Logout</a></li>";
+								}
+								else {
+									print "<li><a href='login/login.php' accesskey='2' title=''>Login</a></li>";
+								}
+							?>
 							
 							<li><a href="categorias/economicos.php" accesskey="3" title="">Econômicos</a></li>
 							<li><a href="categorias/utilitarios.php" accesskey="4" title="">Utilitários</a></li>
