@@ -731,3 +731,9 @@ ul.contact li a:before {
 #campo {
 	border-radius: 15px;
 }
+
+#camposemborda{
+	border-color: white;
+	border: 0px solid white;
+
+}

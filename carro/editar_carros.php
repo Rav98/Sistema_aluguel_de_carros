@@ -21,6 +21,7 @@ if ($stm->execute()) {
         $renavamAutomovel = $row['renavam'];
         $statusAutomovel = $row['status'];
         $tipoAutomovel = $row['tipo'];
+        $valorAutomovel = $row['valor'];
     }
 }
 ?>
@@ -93,6 +94,10 @@ if ($stm->execute()) {
 
                                 <label id="textocadastra">Tipo:</label>
                                 <input type="text" id="campo" name="tipoAutomovel" value="<?php print $tipoAutomovel; ?>" />
+                                <br>
+                                
+                                <label id="textocadastra">Valor por dia: </label>
+                                <input type="text" id="campo" name="valorAutomovel" value="<?php print $valorAutomovel; ?>" />
                                 <br>
 
                                 <label id="textocadastracheck">Direção:</label>

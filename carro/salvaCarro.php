@@ -19,6 +19,7 @@ $tipo_de_combustivelAutomovel = $_POST['tipo_de_combustivelAutomovel'];
 $renavamAutomovel = $_POST['renavamAutomovel'];
 $tipoAutomovel = $_POST['tipoAutomovel'];
 $transmissaoAutomovel = $_POST['transmissaoAutomovel'];
+$valorAutomovel = $_POST['valorAutomovel'];
 
 $statusAutomovel = 1;
 
@@ -41,7 +42,7 @@ if (isset($manutencaoAutomovel)) {
 }
 
 # Query de inserção:
-$query = "INSERT INTO automovel VALUES ('$placaAutomovel','$corAutomovel','$chassisAutomovel','$direcaoAutomovel','$ar_condicionadoAutomovel','$manutencaoAutomovel','$nro_de_portaAutomovel','$quilometragemAutomovel', '$transmissaoAutomovel', '$marcaAutomovel','$tipo_de_combustivelAutomovel','$renavamAutomovel','$statusAutomovel','$tipoAutomovel')";
+$query = "INSERT INTO automovel VALUES ('$placaAutomovel','$corAutomovel','$chassisAutomovel','$direcaoAutomovel','$ar_condicionadoAutomovel','$manutencaoAutomovel','$nro_de_portaAutomovel','$quilometragemAutomovel', '$transmissaoAutomovel', '$marcaAutomovel','$tipo_de_combustivelAutomovel','$renavamAutomovel','$statusAutomovel','$tipoAutomovel','$valorAutomovel')";
 $stm = $db->prepare($query);
 
 

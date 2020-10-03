@@ -70,6 +70,10 @@
                                 <input type="text" id="campo" name="tipoAutomovel" />
                                 <br>
 
+                                <label id="textocadastra">Valor por dia: </label>
+                                <input type="text" id="campo" name="valorAutomovel"/>
+                                <br>
+
                                 <label id="textocadastracheck">Direção:</label>
                                 <input type="checkbox" id="textocadastra" name="direcaoAutomovel" value="TRUE" />
                                 <br>
@@ -81,6 +85,7 @@
                                 <label id="textocadastracheck">Manutenção: </label>
                                 <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" value="TRUE" />
                                 <br>
+
                                 <div id="wrapper1">
                                     <button type="submit" id="botaoCadastro" class="button">
                                         Confirmar cadastro no sistema

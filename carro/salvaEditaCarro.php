@@ -19,6 +19,7 @@ $tipo_de_combustivelAutomovel = $_POST['tipo_de_combustivelAutomovel'];
 $renavamAutomovel = $_POST['renavamAutomovel'];
 $statusAutomovel = $_POST['statusAutomovel'];
 $tipoAutomovel = $_POST['tipoAutomovel'];
+$valorAutomovel = $_POST['valorAutomovel'];
 
 
 if (isset($ar_condicionadoAutomovel)) {
@@ -49,7 +50,7 @@ if (isset($statusAutomovel)) {
 
 
 # Query de inserção:
-$query = "UPDATE automovel SET cor = '$corAutomovel', chassis = '$chassisAutomovel', direcao_assistida = '$direcaoAutomovel', ar_condicionado = '$ar_condicionadoAutomovel', manutencao = '$manutencaoAutomovel', nro_de_porta = '$nro_de_portaAutomovel', quilometragem = '$quilometragemAutomovel', transmissao = '$transmissaoAutomovel', marca = '$marcaAutomovel', tipo_de_combustivel = '$tipo_de_combustivelAutomovel', renavam = '$renavamAutomovel', status = '$statusAutomovel', tipo = '$tipoAutomovel' WHERE placa = '$placaAutomovel'";
+$query = "UPDATE automovel SET cor = '$corAutomovel', chassis = '$chassisAutomovel', direcao_assistida = '$direcaoAutomovel', ar_condicionado = '$ar_condicionadoAutomovel', manutencao = '$manutencaoAutomovel', nro_de_porta = '$nro_de_portaAutomovel', quilometragem = '$quilometragemAutomovel', transmissao = '$transmissaoAutomovel', marca = '$marcaAutomovel', tipo_de_combustivel = '$tipo_de_combustivelAutomovel', renavam = '$renavamAutomovel', status = '$statusAutomovel', tipo = '$tipoAutomovel', valor = '$valorAutomovel' WHERE placa = '$placaAutomovel'";
 $stm = $db->prepare($query);
 
 if ($stm->execute()) {
