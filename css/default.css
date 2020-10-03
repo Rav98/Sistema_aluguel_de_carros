@@ -558,6 +558,7 @@ ul.contact li a:before {
 
 .column5, .column6, .column7 {
 	float: left;
+	margin-top: 4%;
 	margin-right: 24px;
 }
 

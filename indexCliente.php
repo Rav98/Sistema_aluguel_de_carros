@@ -55,7 +55,7 @@
                     <div class="column1">
                         <div class="box">
                             <span class="icon icon-wrench"></span>
-                            <form method="post" action="../carro/pesquisar_carros.php">
+                            <form method="post" action="carro/pesquisar_carros.php">
                                 <h3>Alterar meus dados</h3>
                                 <p>Altere seus dados cadastrados. Como: Nome, CPF, etc.</p>
                                 <button type="submit" id="botaofun1" class="button">
@@ -67,7 +67,7 @@
                     <div class="column2">
                         <div class="box">
                             <span class="icon icon-shopping-cart"></span>
-                            <form method="post" action="../carro/inserir_carros.php">
+                            <form method="post" action="carro/inserir_carros.php">
                             <h3>Alugar um Automovel</h3>
 								<p>Escolha um carro que atenda sua necessidade!</p>
                                 <button type="submit" id="botaofun2" class="button">
