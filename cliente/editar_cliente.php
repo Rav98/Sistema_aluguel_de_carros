@@ -4,7 +4,7 @@
 session_start();
 
 if (isset($_SESSION['cpf'])) {
-	$cpf = $_SESSION['cpf'];
+	$cpfCliente = $_SESSION['cpf'];
 	$tipo = $_SESSION['tipo'];
 }
 else{
@@ -13,7 +13,6 @@ else{
 ?>
 <?php
 include_once "../bd.php";
-$cpfCliente = $_POST['cpfCliente'];
 $query = "SELECT * FROM usuario where cpf = '$cpfCliente'";
 $stm = $db->prepare($query);
 if ($stm->execute()){
@@ -123,7 +122,7 @@ if ($stm->execute()){
                                 <br>
 
                                 <label id="textocadastra">Senha:</label>
-                                <input type="text" id="campo" name="senhaCliente" value="<?php print $senhaUsuario; ?>"/>
+                                <input type="password" id="campo" name="senhaCliente" value="<?php print $senhaUsuario; ?>"/>
                                 <br>
                                 
 
