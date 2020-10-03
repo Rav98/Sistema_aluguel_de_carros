@@ -10,6 +10,19 @@
     <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
+
+    <!--- Esta funcao formata mascara dos inputs-->
+    <script type="text/javascript">
+		function formatar_mascara(src, mascara) {
+ 			var campo = src.value.length;
+ 			var saida = mascara.substring(0,1);
+ 			var texto = mascara.substring(campo);
+ 			if(texto.substring(0,1) != saida) {
+ 			src.value += texto.substring(0,1);
+ 			}
+		}
+    </script>
+
 </head>
 
 <body>
@@ -28,18 +41,18 @@
                     <div id="menu">
                         <div id="divtitulocadastra">Alocar Carro</div>
                         <div id="wrapperlogin">
-                            <form enctype="multipart/form-data" method="POST" action="editar_carros.php">
+                            <form enctype="multipart/form-data" method="POST" action="salvaAluguel.php">
                                 <br>
                                 <label id="textocadastra">Placa:</label>
                                 <input type="text" id="campo" name="placaAutomovel" />
                                 <br>
 
-                                <label id="textocadastra">Data Locação:(A-M-D)</label>
-                                <input type="text" id="campo" name="dataLocacao" />
+                                <label id="textocadastra" >Data Locação:(AAAA-MM-DD)</label>
+                                <input type="text" id="campo" name="dataLocacao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
                                 <br>
 
-                                <label id="textocadastra">Data Devolução: (A-M-D)</label>
-                                <input type="text" id="campo" name="dataDevolucao" />
+                                <label id="textocadastra" >Data Devolução: (AAAA-MM-DD)</label>
+                                <input type="text" id="campo" name="dataDevolucao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
                                 <br>
                                 <br>
                                 <br>
