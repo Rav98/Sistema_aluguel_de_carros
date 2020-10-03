@@ -5,11 +5,10 @@
 session_start();
 
 if (isset($_SESSION['cpf'])) {
-	$cpf = $_SESSION['cpf'];
-	$tipo = $_SESSION['tipo'];
-}
-else{
-	$tipo = '';
+    $cpf = $_SESSION['cpf'];
+    $tipo = $_SESSION['tipo'];
+} else {
+    $tipo = '';
 }
 ?>
 
@@ -41,24 +40,21 @@ else{
                     <div id="menu">
                         <ul>
                             <?php
-								if($tipo = 'F'){
-									print "<li class='current_page_item'><a href='indexFuncionario.php' accesskey='1' title=''>Principal</a></li>";
-								}
-								else if ($tipo = 'C'){
-									print "<li class='current_page_item'><a href='indexCliente.php' accesskey='1' title=''>Principal</a></li>";
-								}
-								else{
-									print "<li class='current_page_item'><a href='index.php' accesskey='1' title=''>Principal</a></li>";
-								}
-								
-							?>
-							<?php if (isset($_SESSION['cpf'])) {
-										print "<li><a href='login/logout.php' accesskey='2' title=''>Logout</a></li>";
-									}
-									else {
-										print "<li><a href='login/login.php' accesskey='2' title=''>Login</a></li>";
-									}
-							?>
+                            if ($tipo = 'F') {
+                                print "<li class='current_page_item'><a href='indexFuncionario.php' accesskey='1' title=''>Principal</a></li>";
+                            } else if ($tipo = 'C') {
+                                print "<li class='current_page_item'><a href='indexCliente.php' accesskey='1' title=''>Principal</a></li>";
+                            } else {
+                                print "<li class='current_page_item'><a href='index.php' accesskey='1' title=''>Principal</a></li>";
+                            }
+
+                            ?>
+                            <?php if (isset($_SESSION['cpf'])) {
+                                print "<li><a href='login/logout.php' accesskey='2' title=''>Logout</a></li>";
+                            } else {
+                                print "<li><a href='login/login.php' accesskey='2' title=''>Login</a></li>";
+                            }
+                            ?>
                             <li><a href="categorias/economicos.php" accesskey="3" title="">Econômicos</a></li>
                             <li><a href="categorias/utilitarios.php" accesskey="4" title="">Utilitários</a></li>
                             <li><a href="categorias/suv.php" accesskey="5" title="">SUV</a></li>
@@ -84,7 +80,7 @@ else{
                     <div class="column1">
                         <div class="box">
                             <span class="icon icon-wrench"></span>
-                            <form method="post" action="carro/pesquisar_carros.php">
+                            <form method="post" action="cliente/editar_cliente.php">
                                 <h3>Alterar meus dados</h3>
                                 <p>Altere seus dados cadastrados. Como: Nome, CPF, etc.</p>
                                 <button type="submit" id="botaofun1" class="button">
@@ -96,9 +92,9 @@ else{
                     <div class="column2">
                         <div class="box">
                             <span class="icon icon-shopping-cart"></span>
-                            <form method="post" action="carro/inserir_carros.php">
-                            <h3>Alugar um Automovel</h3>
-								<p>Escolha um carro que atenda sua necessidade!</p>
+                            <form method="post" action="categorias/interface_economicos.php">
+                                <h3>Alugar um Automovel</h3>
+                                <p>Escolha um carro que atenda sua necessidade!</p>
                                 <button type="submit" id="botaofun2" class="button">
                                     Alugar automovel
                                 </button>

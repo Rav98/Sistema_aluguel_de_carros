@@ -1,5 +1,16 @@
 <!DOCTYPE html>
+<?php
+// Inicia a sessão.
+session_start();
 
+if (isset($_SESSION['cpf'])) {
+	$cpf = $_SESSION['cpf'];
+	$tipo = $_SESSION['tipo'];
+}
+else{
+	$tipo = '';
+}
+?>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

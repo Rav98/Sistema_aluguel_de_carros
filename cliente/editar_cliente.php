@@ -1,5 +1,16 @@
 <!DOCTYPE html>
+<?php
+// Inicia a sessão.
+session_start();
 
+if (isset($_SESSION['cpf'])) {
+	$cpf = $_SESSION['cpf'];
+	$tipo = $_SESSION['tipo'];
+}
+else{
+	$tipo = '';
+}
+?>
 <?php
 include_once "../bd.php";
 $cpfCliente = $_POST['cpfCliente'];
@@ -127,10 +138,18 @@ if ($stm->execute()){
                                     <button type="submit" id="botaoCadastro" class="button">
                                         Confirmar edição
                                     </button>
-
-                                    <button id="botaoCancelar" class="button" formaction="../index.php">
-                                        Cancelar cadastro
-                                    </button>
+                                    
+                                    <?php if ($tipo=='C') {
+                                            echo "<button id='botaoCancelar' class='button' formaction='../indexCliente.php'>
+                                            Cancelar cadastro
+                                        </button>";
+                                    }
+                                        else{
+                                            echo "<button id='botaoCancelar' class='button' formaction='../indexFuncionario.php'>
+                                            Cancelar cadastro
+                                        </button>";
+                                        
+                                            } ?> 
                                 </div>
                             </form>
                         </div>

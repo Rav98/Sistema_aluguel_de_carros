@@ -108,7 +108,7 @@ else{
 					<div class="column3">
 						<div class="box">
 							<span class="icon icon-key"></span>
-							<form method="post" action="altera_conta.php">
+							<form method="post" action="funcionario/editar_funcionario.php">
 								<h3>Alterar meus dados</h3>
 								<p>Altere seus dados cadastrados. Como: Nome, CPF, etc.</p>
 								<button type="submit" id="botaofun2" class="button">
@@ -120,7 +120,7 @@ else{
 					<div class="column4">
 						<div class="box">
 							<span class="icon icon-laptop"></span>
-							<form method="post" action="cliente/alterar_conta.php">
+							<form method="post" action="cliente/pesquisar_cliente.php">
 								<h3>Alterar Dados dos clientes</h3>
 								<p>Altere os dados dos clientes. Como: Nome, CPF, etc.</p>
 								<button type="submit" id="botaofun2" class="button">
@@ -137,6 +137,18 @@ else{
 								<p>Verificar todos os carros que estão na mecanica. </p>
 								<button type="submit" id="botaofun2" class="button">
 									Verificar
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="column6">
+						<div class="box">
+							<span class="icon icon-file-alt"></span>
+							<form method="post" action="funcionario/cria_conta.php">
+								<h3>Cadastrar um funcionario</h3>
+								<p>Cadastrar um novo funcionario no sistema.</p>
+								<button type="submit" id="botaofun2" class="button">
+									cadastrar
 								</button>
 							</form>
 						</div>
