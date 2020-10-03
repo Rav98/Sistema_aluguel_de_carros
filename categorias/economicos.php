@@ -8,10 +8,8 @@ if (isset($_SESSION['cpf'])) {
 	$tipo = $_SESSION['tipo'];
 }
 else{
-	$tipo = 'X';
+	$tipo = '';
 }
-
-#print "<p>Func: $cpf Tipo $cpf</p>";
 
 ?>
 
@@ -50,14 +48,14 @@ else{
 					<div id="menu">
 						<ul>
 							<?php
-								if($tipo = 'F'){
-									print "<li class='current_page_item'><a href='../indexFuncionario.php' accesskey='1' title=''>Principal</a></li>";
+								if($tipo == 'F'){
+									echo "<li><a href='../indexFuncionario.php' accesskey='1' title='Principal1'>Principal</a></li>";
 								}
-								if ($tipo = 'C'){
-									print "<li class='current_page_item'><a href='../indexCliente.php' accesskey='1' title=''>Principal</a></li>";
+								if ($tipo == 'C'){
+									echo "<li><a href='../indexCliente.php' accesskey='1' title='Principal2'>Principal</a></li>";
 								}
-								if ($tipo = 'X'){
-									print "<li class='current_page_item'><a href='../index.php' accesskey='1' title=''>Principal</a></li>";
+								if ($tipo == ''){
+									echo "<li><a href='../index.php' accesskey='1' title='Principal3'>Principal</a></li>";
 								}
 								
 							?>
@@ -113,46 +111,82 @@ else{
 								$ar_condicionadoAutomovel = "Não";
 							}
 
-							echo " 
-				<div id='wrapper_carros'>
-
-				<div id='portfolio' class='container_carros'>
-				
-					<div class='column10'>
-					
-						<div class='boxcar'>
-						
-							<span class='icon icon-shopping-cart'></span>
+							if ($tipo == 'C'){
+								echo " 
+								<div id='wrapper_carros'>
+								<div id='portfolio' class='container_carros'>
+									<div class='column10'>
+										<div class='boxcar'>
+											<span class='icon icon-shopping-cart'></span>
+											<form enctype='multipart/form-data' method='POST' action='../carro/alugar_carro.php' >							
+											<h33><strong>Modelo  </strong>$marcaAutomovel</h33>							
+											<h33><strong>Placa:  </strong> <input type='text' id='camposemborda' readonly = 'true' name='placaAutomovel' value='$placaAutomovel' />  </h33>							
+											<h33><strong>Cor:  </strong>$corAutomovel</h33>							
+											<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>							
+											<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>						
+											<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
+											<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>						
+											<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>						
+											<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+											<button type='submit' id='botaofun1' class='button'>
+												Alugar 
+											</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>";
+							}
+							else if ($tipo == 'F'){
+								echo " 
+									<div id='wrapper_carros'>
+									<div id='portfolio' class='container_carros'>
+										<div class='column10'>
+											<div class='boxcar'>
+												<span class='icon icon-shopping-cart'></span>
+												<form enctype='multipart/form-data' method='POST' action='../carro/editar_carros.php' >							
+												<h33><strong>Modelo  </strong>$marcaAutomovel</h33>							
+												<h33><strong>Placa:  </strong><input type='text' readonly = 'true' id='camposemborda' name='placaAutomovel' value='$placaAutomovel' /> </h33>							
+												<h33><strong>Cor:  </strong>$corAutomovel</h33>							
+												<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>							
+												<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>						
+												<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
+												<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>						
+												<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>						
+												<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+												<button type='submit' id='botaofun1' class='button'>
+													Editar 
+												</button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>";
+							}
+							else{
+								echo " 
+									<div id='wrapper_carros'>
+									<div id='portfolio' class='container_carros'>
+										<div class='column10'>
+											<div class='boxcar'>
+												<span class='icon icon-shopping-cart'></span>
+												<form>							
+												<h33><strong>Modelo  </strong>$marcaAutomovel</h33>							
+												<h33><strong>Placa:  </strong><input type='text' readonly = 'true' id='camposemborda' name='placaAutomovel' value='$placaAutomovel' /> </h33>							
+												<h33><strong>Cor:  </strong>$corAutomovel</h33>							
+												<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>							
+												<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>						
+												<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
+												<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>						
+												<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>						
+												<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>";
+							}
 							
-                            <form method='post' action='../carro/alugar_carro' >
-							
-							<h33><strong>Modelo  </strong>$marcaAutomovel</h33>
-							
-							<h33><strong>Placa:  </strong>$placaAutomovel</h33>
-							
-							<h33><strong>Cor:  </strong>$corAutomovel</h33>
-							
-							<h33><strong>Direção assistida:  </strong>$direcaoAutomovel</h33>
-							
-							<h33><strong>Ar condicionado:  </strong>$ar_condicionadoAutomovel</h33>
-						
-							<h33><strong>Numero de porta:  </strong>$nro_de_portaAutomovel</h33>
-
-							<h33><strong>Combustivel:  </strong>$tipo_de_combustivelAutomovel</h33>
-						
-							<h33><strong>Quilometragem:  </strong>$quilometragemAutomovel</h33>
-						
-							<h33><strong>Transmissão:  </strong>$transmissaoAutomovel</h33>
-						
-						    <button type='submit' id='botaofun1' class='button'>
-                                Alugar 
-							</button>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>";
 						}
 					}
 					?>

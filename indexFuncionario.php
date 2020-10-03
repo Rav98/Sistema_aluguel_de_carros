@@ -6,7 +6,6 @@ session_start();
 
 if (isset($_SESSION['cpf'])) {
 	$cpf = $_SESSION['cpf'];
-	print "<p>Usuário $cpf do tipo $tipo logado</p>";
 	$tipo = $_SESSION['tipo'];
 }
 else{
