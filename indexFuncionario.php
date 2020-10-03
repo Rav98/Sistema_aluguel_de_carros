@@ -55,7 +55,7 @@
 					<div class="column1">
 						<div class="box">
 							<span class="icon icon-wrench"></span>
-							<form method="post" action="../carro/pesquisar_carros.php">
+							<form method="post" action="carro/pesquisar_carros.php">
 								<h3>Alterar Dados dos carros</h3>
 								<p>Altere os dados dos carros cadastrados. Como: Status, Manutenção, etc.</p>
 								<button type="submit" id="botaofun1" class="button">
@@ -67,7 +67,7 @@
 					<div class="column2">
 						<div class="box">
 							<span class="icon icon-file-alt"></span>
-							<form method="post" action="../carro/inserir_carros.php">
+							<form method="post" action="carro/inserir_carros.php">
 								<h3>Inserir um carro na frota</h3>
 								<p>Insira um novo veiculo no sistema de gerenciamento!</p>
 								<button type="submit" id="botaofun2" class="button">
@@ -91,11 +91,23 @@
 					<div class="column4">
 						<div class="box">
 							<span class="icon icon-laptop"></span>
-							<form method="post" action="../cliente/alterar_conta.php">
+							<form method="post" action="cliente/alterar_conta.php">
 								<h3>Alterar Dados dos clientes</h3>
 								<p>Altere os dados dos clientes. Como: Nome, CPF, etc.</p>
 								<button type="submit" id="botaofun2" class="button">
 									Alterar dados do cliente
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="column5">
+						<div class="box">
+							<span class="icon icon-laptop"></span>
+							<form method="post" action="carro/todos_mecanica.php">
+								<h3>Verificar carros na mecanica</h3>
+								<p>Verificar todos os carros que estão na mecanica. </p>
+								<button type="submit" id="botaofun2" class="button">
+									Verificar
 								</button>
 							</form>
 						</div>
