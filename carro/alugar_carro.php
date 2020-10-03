@@ -46,7 +46,7 @@ $placaAutomovel = $_POST['placaAutomovel'];
                             <form enctype="multipart/form-data" method="POST" action="salvaAluguel.php">
                                 <br>
                                 <label id="textocadastra">Placa:</label>
-                                <input type="text" id="campo" name="placaAutomovel" readonly="true" <?php print "value='$placaAutomovel'" ?> />
+                                <input type="text" id="campo" name="placa" readonly="true" <?php print "value='$placaAutomovel'" ?> />
                                 <br>
 
                                 <label id="textocadastra" >Data Locação:(AAAA-MM-DD)</label>
