@@ -29,7 +29,7 @@
 					<h1><a href="#">Sistema de Gerenciamento de Aluguel de Carros</a></h1>
 					<div id="menu">
 						<ul>
-							<li><a href="../index.php" accesskey="1" title="">Principal</a></li>
+							<li><a href="../indexFuncionario.php" accesskey="1" title="">Principal</a></li>
 							<li><a href="../login/login.php" accesskey="2" title="">Login</a></li>
 							<li><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
 							<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>

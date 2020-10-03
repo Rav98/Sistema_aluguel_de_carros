@@ -54,7 +54,7 @@ $query = "UPDATE automovel SET cor = '$corAutomovel', chassis = '$chassisAutomov
 $stm = $db->prepare($query);
 
 if ($stm->execute()) {
-    header("location:../index.php");
+    header("location:../indexFuncionario.php");
 } else {
     print "<p>Faiô</p>";
     header("location:salvaEditaCarro.php?error=salvaEdiaCarro");

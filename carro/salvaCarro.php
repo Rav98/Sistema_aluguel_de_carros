@@ -47,7 +47,7 @@ $stm = $db->prepare($query);
 
 
 if ($stm->execute()) {
-    header("location:../index.php");
+    header("location:../indexFuncionario.php");
 } else {
     header("location:salvaCarro.php?error=salvaCarro");
 }
