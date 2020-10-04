@@ -102,37 +102,55 @@ if (isset($_SESSION['cpf'])) {
                         </div>
                     </div>
                     <div class="column3">
-
-                    </div>
-                    <div class="column4">
-
+                    <div class="box">
+                        <span class="icon icon-shopping-cart"></span>
+                        <form method="post" action="cliente/interface_cancelar_reserva.php">
+                            <h3>Cancelar reservas</h3>
+                            <p>Cancele reservas abertas, caso tenha desistido ou errado algum detelhe.</p>
+                            <button type="submit" id="botaofun2" class="button">
+                                Editar reserva
+                            </button>
+                        </form>
+                        </div>
+                        </div>
+                        <div class="column4">
+                            <div class="box">
+                                <span class="icon icon-shopping-cart"></span>
+                                <form method="post" action="cliente/buscar_reservas.php">
+                                    <h3>Buscar reservas</h3>
+                                    <p>Busque todas as reservas que estão abertas em seu nome.</p>
+                                    <button type="submit" id="botaofun2" class="button">
+                                        Buscar reserva
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="wrapper1">
+            <div id="wrapper1">
+                <div id="espaço_container" class="container">
+                    <div class="title">
+                        <h2>Temos todos os tipos de automóveis!</h2>
+                        <img src="images/veiculos.png" alt="some text" width=800 height=280>
+                    </div>
+                </div>
+            </div>
             <div id="espaço_container" class="container">
                 <div class="title">
-                    <h2>Temos todos os tipos de automóveis!</h2>
-                    <img src="images/veiculos.png" alt="some text" width=800 height=280>
+                    <h2>Acesse nossas redes sociais!</h2>
+                    <span class="byline">Estamos sempre a disposição de nossos clientes!</span>
+                </div>
+                <ul class="contact">
+                    <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+                    <li><a href="#" class="icon icon-facebook"><span></span></a></li>
+                    <li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+                    <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+                    <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+                </ul>
+                <div id="espaço_container" class="container">
                 </div>
             </div>
-        </div>
-        <div id="espaço_container" class="container">
-            <div class="title">
-                <h2>Acesse nossas redes sociais!</h2>
-                <span class="byline">Estamos sempre a disposição de nossos clientes!</span>
-            </div>
-            <ul class="contact">
-                <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-                <li><a href="#" class="icon icon-facebook"><span></span></a></li>
-                <li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-                <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-                <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
-            </ul>
-            <div id="espaço_container" class="container">
-            </div>
-        </div>
 </body>
 
 </html>
