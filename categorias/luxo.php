@@ -92,6 +92,18 @@ else{
 							$statusAutomovel = $row['status'];
 							$tipoAutomovel = $row['tipo'];
 
+							if ($direcaoAutomovel == 1) {
+								$direcaoAutomovel = "Sim";
+							} else {
+								$direcaoAutomovel = "Não";
+							}
+
+							if ($ar_condicionadoAutomovel == 1) {
+								$ar_condicionadoAutomovel = "Sim";
+							} else {
+								$ar_condicionadoAutomovel = "Não";
+							}
+
 							if ($tipo == 'C'){
 								echo " 
 								<div id='wrapper_carros'>

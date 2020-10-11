@@ -108,7 +108,7 @@ if (isset($_SESSION['cpf'])) {
                             <h3>Cancelar reservas</h3>
                             <p>Cancele reservas abertas, caso tenha desistido ou errado algum detelhe.</p>
                             <button type="submit" id="botaofun2" class="button">
-                                Editar reserva
+                                Cancelar reserva
                             </button>
                         </form>
                         </div>

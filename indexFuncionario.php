@@ -136,7 +136,7 @@ else{
 								<h3>Verificar carros na mecanica</h3>
 								<p>Verificar todos os carros que estão na mecanica. </p>
 								<button type="submit" id="botaofun2" class="button">
-									Verificar
+									Verificar manutenção
 								</button>
 							</form>
 						</div>
@@ -148,7 +148,7 @@ else{
 								<h3>Cadastrar um funcionario</h3>
 								<p>Cadastrar um novo funcionario no sistema.</p>
 								<button type="submit" id="botaofun2" class="button">
-									cadastrar
+									Cadastrar funcionario
 								</button>
 							</form>
 						</div>

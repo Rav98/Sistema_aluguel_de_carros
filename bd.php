@@ -1,10 +1,10 @@
 <?php
-$datasource = "pgsql:host=177.44.36.247; port=1998; dbname=sis_car_aluguel";
+$datasource = "pgsql:host=177.44.40.212; port=1998; dbname=sis_car_aluguel";
 $user = "postgres";
 $pass = "bd123";
 $db = new PDO($datasource, $user, $pass);
-
-#$query = "SELECT listarclientes()";
-#$stm = $db->prepare($query);
-#$stm->execute();
 ?>
+
+
+
+

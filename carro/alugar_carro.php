@@ -49,11 +49,11 @@ $placaAutomovel = $_POST['placaAutomovel'];
                                 <input type="text" id="campo" name="placa" readonly="true" <?php print "value='$placaAutomovel'" ?> />
                                 <br>
 
-                                <label id="textocadastra" >Data Locação:(AAAA-MM-DD)</label>
+                                <label id="textocadastra" >Data Locação:(A-M-D)</label>
                                 <input type="text" id="campo" name="dataLocacao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
                                 <br>
 
-                                <label id="textocadastra" >Data Devolução: (AAAA-MM-DD)</label>
+                                <label id="textocadastra" >Data Devolução: (A-M-D)</label>
                                 <input type="text" id="campo" name="dataDevolucao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
                                 <br>
                                 <br>

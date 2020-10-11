@@ -71,8 +71,8 @@
 					<button  id="botaoCriarConta" class="button" formaction="../cliente/cria_conta.php">
 						Criar conta
 					</button>
-
 				</form>
+				<br>
 			</div>
 		</div>
 		<div id="espaço_container" class="container">
