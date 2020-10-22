@@ -6,8 +6,7 @@ session_start();
 if (isset($_SESSION['cpf'])) {
 	$cpf = $_SESSION['cpf'];
 	$tipo = $_SESSION['tipo'];
-}
-else{
+} else {
 	$tipo = '';
 }
 
@@ -25,8 +24,9 @@ else{
 	<link href="../icon.css" rel="stylesheet" type="text/css" media="all" />
 
 	<?php
-	function phpAlert($msg) {
-    	echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+	function phpAlert($msg)
+	{
+		echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 	}
 	?>
 
@@ -48,24 +48,23 @@ else{
 					<div id="menu">
 						<ul>
 							<?php
-								if($tipo == 'F'){
-									echo "<li><a href='../indexFuncionario.php' accesskey='1' title='Principal1'>Principal</a></li>";
-								}
-								if ($tipo == 'C'){
-									echo "<li><a href='../indexCliente.php' accesskey='1' title='Principal2'>Principal</a></li>";
-								}
-								if ($tipo == ''){
-									echo "<li><a href='../index.php' accesskey='1' title='Principal3'>Principal</a></li>";
-								}
-								
+							if ($tipo == 'F') {
+								echo "<li><a href='../indexFuncionario.php' accesskey='1' title='Principal1'>Principal</a></li>";
+							}
+							if ($tipo == 'C') {
+								echo "<li><a href='../indexCliente.php' accesskey='1' title='Principal2'>Principal</a></li>";
+							}
+							if ($tipo == '') {
+								echo "<li><a href='../index.php' accesskey='1' title='Principal3'>Principal</a></li>";
+							}
+
 							?>
-							<?php 
-								if (isset($_SESSION['cpf'])) {
-									print "<li><a href='../login/logout.php' accesskey='2' title=''>Logout</a></li>";
-								}
-								else {
-									print "<li><a href='../login/login.php' accesskey='2' title=''>Login</a></li>";
-								}
+							<?php
+							if (isset($_SESSION['cpf'])) {
+								print "<li><a href='../login/logout.php' accesskey='2' title=''>Logout</a></li>";
+							} else {
+								print "<li><a href='../login/login.php' accesskey='2' title=''>Login</a></li>";
+							}
 							?>
 							<li class="current_page_item"><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
 							<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
@@ -111,24 +110,8 @@ else{
 								$ar_condicionadoAutomovel = "Não";
 							}
 
-							if ($tipo == 'C'){
+							if ($tipo == 'C') {
 								echo " 
-
-								<div id='wrapper3'>
-								<div id='portfolio' class='container'>
-									<div class='title'>
-										<h2>Vantagens de se alugar um automóvel</h2>
-									</div>
-									<div class='column1'>
-										<div class='box'>
-											<span class='icon icon-wrench'></span>
-											<h3>Não se preocupe com manutenção</h3>
-											<p>A manutenção é por conta nossa. Apenas preocupe-se em diigir!</p>
-										</div>
-									</div>
-
-
-
 								<div id='wrapper_carros'>
 								<div id='portfolio' class='container_carros'>
 									<div class='column10'>
@@ -152,8 +135,7 @@ else{
 									</div>
 								</div>
 							</div>";
-							}
-							else if ($tipo == 'F'){
+							} else if ($tipo == 'F') {
 								echo " 
 									<div id='wrapper_carros'>
 									<div id='portfolio' class='container_carros'>
@@ -178,8 +160,7 @@ else{
 										</div>
 									</div>
 								</div>";
-							}
-							else{
+							} else {
 								echo " 
 									<div id='wrapper_carros'>
 									<div id='portfolio' class='container_carros'>
@@ -202,7 +183,6 @@ else{
 									</div>
 								</div>";
 							}
-							
 						}
 					}
 					?>
