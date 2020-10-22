@@ -113,6 +113,22 @@ else{
 
 							if ($tipo == 'C'){
 								echo " 
+
+								<div id='wrapper3'>
+								<div id='portfolio' class='container'>
+									<div class='title'>
+										<h2>Vantagens de se alugar um automóvel</h2>
+									</div>
+									<div class='column1'>
+										<div class='box'>
+											<span class='icon icon-wrench'></span>
+											<h3>Não se preocupe com manutenção</h3>
+											<p>A manutenção é por conta nossa. Apenas preocupe-se em diigir!</p>
+										</div>
+									</div>
+
+
+
 								<div id='wrapper_carros'>
 								<div id='portfolio' class='container_carros'>
 									<div class='column10'>
