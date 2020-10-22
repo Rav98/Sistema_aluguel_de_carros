@@ -128,7 +128,7 @@ if ($stm->execute()){
                                         Confirmar edição
                                     </button>
 
-                                    <button id="botaoCancelar" class="button" formaction="../index.php">
+                                    <button id="botaoCancelar" class="button" formaction="../indexFuncionario.php">
                                         Cancelar cadastro
                                     </button>
                                 </div>
