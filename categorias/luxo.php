@@ -44,7 +44,7 @@ else{
 								if($tipo == 'F'){
 									echo "<li><a href='../indexFuncionario.php' accesskey='1' title='Principal1'>Principal</a></li>";
 								}
-								if ($tipo == 'C'){
+								else if ($tipo == 'C'){
 									echo "<li><a href='../indexCliente.php' accesskey='1' title='Principal2'>Principal</a></li>";
 								}
 								else{

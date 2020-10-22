@@ -120,7 +120,7 @@ else{
 					<div class="column4">
 						<div class="box">
 							<span class="icon icon-laptop"></span>
-							<form method="post" action="cliente/pesquisar_cliente.php">
+							<form method="post" action="cliente/pesquisa_cliente_via_funcionario.php">
 								<h3>Alterar Dados dos clientes</h3>
 								<p>Altere os dados dos clientes. Como: Nome, CPF, etc.</p>
 								<button type="submit" id="botaofun2" class="button">
