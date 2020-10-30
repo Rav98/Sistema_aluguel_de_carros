@@ -47,7 +47,10 @@ O primeiro passo para construção do ambiente é a configuração do servidor d
 
 ### Servidor
 
-Inicialmente, cria-se um servidor utilizando a interface do PostgreSQL. Veja na Figura 1.
+Inicialmente, é preciso acessar um arquivo do PostgreSQL para configurar o modo de autenticação entre o servidor e o cliente. O arquivo que sera modificado é o pg_hba.conf. Recomenda-se a leitura da documentação do PostgreSQL para que a configuração seja feita de acordo com a versão instalada. Lembrando que recomendamos sempre a versão mais atualizada do SGBD para que a segurança do sistema esteja assegurada. O link da documentação para alterar o arquivo pg_hba.conf é:
+https://www.postgresql.org/docs/9.1/auth-pg-hba-conf.html. 
+
+Após a configuração do arquivo pg\_hba.conf, cria-se um servidor utilizando a interface do PostgreSQL. Veja na Figura 1.
 
 #### FIGURA 1. Criação do servidor na Interface do PostgreSQL
 
